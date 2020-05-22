@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-22 19:34+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\WebAuto\settings.py:119
+msgid "Russia"
+msgstr ""
+
+#: .\WebAuto\settings.py:120
+msgid "English"
+msgstr ""
+
+#: .\templates\include\header.html:21
+msgid "ГЛАВНАЯ"
+msgstr "MAIN PAGE"
+
+#: .\templates\include\header.html:24
+msgid "МАГАЗИН"
+msgstr "SHOP"
+
+#: .\templates\include\header.html:25
+msgid "ПРОЧЕЕ"
+msgstr "OTHER"
+
+#: .\templates\include\header.html:65
+msgid "БЕСПЛАТНЫЙ"
+msgstr "FREE"
+
+#: .\templates\include\header.html:66
+msgid "ТЕСТ ДРАЙВ"
+msgstr "TEST DRIVE OF"
+
+#: .\templates\include\header.html:67
+msgid "НАШИХ АВТО"
+msgstr "OUR CARS"
+
+#: .\templates\include\header.html:69
+msgid "ЗАПИСАТЬСЯ"
+msgstr "SIGN UP"

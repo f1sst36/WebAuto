@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="testdrive_main_title">
+    <div class="container">
+        <div class="row">
+            <div class="row testdrive_main_title_1">
+                <h2 class="wide_title">Запись на тест-драйв</h2>
+            </div>
+            <div class="row testdrive_main_title_2">
+                <h6 class="text">Выбираете новый автомобиль? Пройдите тест-драйв на автомобилях, чтобы убедиться в их ходовых характеристиках и эргономике.</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testdrive_form">
+    <div class="container">
+        <div class="testdrive_content">
+            <form action="testdrive.html">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="select_model">
+                            <select class="form-control">
+                                <option>Выберите модель авто*</option>
+                                <option>Модель 1</option>
+                                <option>Модель 2</option>
+                                <option>Модель 3</option>
+                                <option>Модель 4</option>
+                                <option>Модель 5</option>
+                            </select>
+                        </div>
+                        <div class="select_model">
+                            <select class="form-control">
+                                <option>Выберите время*</option>
+                                <option>9:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                            </select>
+                        </div>
+                        <div class="input_div" style="color: #999;">
+                            <input type="date" class="input">
+                        </div>
+                        <p class="text">* Обязательное поле</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="input_div one">
+                            <h5>Имя*</h5>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input_div two">
+                            <h5>Фамилия*</h5>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input_div three">
+                            <h5>Email</h5>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input_div four">
+                            <h5>Телефон*</h5>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <button type="submit" class="slider_button testdrive_btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/testDrive.js' %}"></script>
+{% endblock content%}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Магазин деталей{% endblock title %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="filter">
+                <div class="col-lg-6">
+                    <form action="{% url 'shop_search' %}" method="get">
+                        <div class="search">
+                            <input type="text" name="search_query" placeholder="Введите свой запрос" required>
+                            <button type="submit">Поиск</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="sort">
+                        <select name="" id="">
+                            <option value="">По возвростанию цены</option>
+                            <option value="">По убыванию цены</option>
+                            <option value="">Самые популярные</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% if not product_list %}
+        <div>По вашему запросу "{{ search_query }}" ничего не найдено</div>
+        {% endif %}
+        {% for product in product_list %}
+        <div class="row">
+            <div class="item">
+                <div class="col-lg-4">
+                    <div class="outer-item-picture">
+                        <img class="itemPicture" src="{{ product.picture.url }}" alt="">
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»" {% if product.rating >= 5 %}style="color: #c62f2d;
+	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                        <input type="radio" id="star-4" name="rating" value="4" >
+                        <label for="star-4" title="Оценка «4»" {% if product.rating >= 4 %}style="color: #c62f2d;
+	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»" {% if product.rating >= 3 %}style="color: #c62f2d;
+	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»" {% if product.rating >= 2 %}style="color: #c62f2d;
+	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»" {% if product.rating >= 1 %}style="color: #c62f2d;
+	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h5><b class="itemTitle">{{ product.name }}</b></h5>
+                    <h6><b>Цена:</b>
+                        <spin class="itemPrice">{{ product.price }}₽</spin>
+                    </h6>
+                    <ul class="icons">
+                        <!--<li><i class="fa fa-cart-plus cartPlus" aria-hidden="true" data-slug="{{ product.slug }}"></i></li>-->
+                        <!--<li><i class="fa fa-info-circle" aria-hidden="true"></i></li>-->
+                        <li><a href="{{ product.get_absolute_url }}">
+                            <button class="itemButton">Подробнее</button>
+                        </a></li>
+                        <li>
+                            <button class="itemButton cartPlus" data-slug="{{ product.slug }}">В корзину</button>
+                        </li>
+                    </ul>
+                    <hr>
+                    <p>
+                        {{ product.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="container">
+        <div class="row">
+            {% include 'include/pagination.html' %}
+        </div>
+    </div>
+</section>
+
+<div id="pop-out"></div>
+
+<script src="{% static 'js/shop.js' %}"></script>
+
+{% endblock content %}

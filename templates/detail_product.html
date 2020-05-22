@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="product_review">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="product_img">
+                    <img class="itemPicture" src="{{ product.picture.url }}" alt="31">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <h3 class="itemTitle">{{ product.name }}</h3>
+                </div>
+                <div class="row price">
+                    <h4>Цена:&nbsp</h4>
+                    <h4><span class="itemPrice">{{ product.price }},00₽</span></h4>
+                </div>
+                <div class="row">
+                    <p class="text">
+                        {{ product.description }}
+                    </p>
+                </div>
+                <div class="row">
+                    <h5>Color</h5>
+                    <p style="margin: auto;">Черный Серый Белый</p>
+                </div>
+                <hr>
+                <div class="row">
+                    <h5>Size</h5>
+                    <p style="margin: auto;">Имеется в разных размерах</p>
+                </div>
+                <hr>
+                <div class="row" style="margin-top: 25px;">
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="8">
+                    <button class="basket" id="toCart" data-slug="{{ product.slug }}">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product_info_tabs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div>
+                    <button class="info_btn active_btn" id="btn_more">Подробнее</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div>
+                    <button class="info_btn" id="btn_feature">Характеристики</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div>
+                    <button class="info_btn" id="reviews">Отзывы</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product_info_content prod_more_inf prod_tabs_active">
+                <p class="text">
+                    Рекомендованные параметры колесного диска могут немного отличаться для одной и той же машины,
+                    независимо от того, какой диск вы хотите установить на ваш автомобиль — стальной, литой или кованый.
+                    Но существует стандартная маркировка диска, которая выглядит, для примера, вот так:
+                    Поэтому если вы захотите измерить рулеткой внешний диаметр автомобильного диска, вы должны учитывать,
+                    что на самом деле его действительное значение чуть меньше. А чтобы перевести диаметр диска из сантиметров
+                    в дюймы, нужно разделить полученное значение на 2,54. У дисков с четырьмя крепёжными болтами (или гайками)
+                    PCD равно расстоянию между центрами дальних (противоположных) болтов или гаек.
+                </p>
+            </div>
+            <div class="product_info_content prod_feature">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Фамилия</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="product_info_content prod_review">
+                <div class="row user_reviews">
+                    <div class="row">
+                        <h5>Виктор</h5>
+                    </div>
+                    <div class="row">
+                        <div class="review_box">
+                            <h6>22.05.2020</h6>
+                            <p class="text">Наишикарнейший товар. Просто сказка!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row review_main_label">
+                    <h4>Оставьте отзыв</h4>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="" style="margin: 0;"><strong>Оцените товар</strong></label>
+
+                        <div class="rating">
+                            <input type="radio" name="star" id="star1"><label for="star1">
+                            </label>
+                            <input type="radio" name="star" id="star2"><label for="star2">
+                            </label>
+                            <input type="radio" name="star" id="star3"><label for="star3">
+                            </label>
+                            <input type="radio" name="star" id="star4"><label for="star4">
+                            </label>
+                            <input type="radio" name="star" id="star5"><label for="star5">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 40px;">
+                      <label for="exampleFormControlSelect1">Имя*</label>
+                      <input class="form-control" type="text" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email*</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Ваш отзыв</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                        <button type="reset" class="btn btn-primary" id="prod_reset_btn">Очистить</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="pop-out"></div>
+
+<script src="{% static 'js/detail_product.js' %}"></script>
+<script src="{% static 'js/product_tabs_info.js' %}"></script>
+{% endblock content %}

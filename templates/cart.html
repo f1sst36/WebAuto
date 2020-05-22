@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Корзина{% endblock title %}
+
+{% block content %}
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9" id="cartItems">
+
+		    </div>
+		    <div class="item-sidebar col-lg-3">
+		    	<div class="item-sidebar-cart">
+		    		<h1>Корзина покупок</h1>
+		    		<div class="item-sidebar-cart-body">
+		    			<ul class="prices">
+		    				<li>
+		    					<label>Цена за товар</label>
+		    					<div class="pull-right"><b>1000.00₽</b></div>
+		    				</li>
+		    				<li>
+		    					<label>Стоимость доставки</label>
+		    					<div class="pull-right"><b>Бесплатно</b></div>
+		    				</li>
+		    			</ul>
+		    			<ul class="total-price">
+		    				<li>
+		    					<label>Общая стоимость</label>
+		    					<div class="pull-right total-price-number"><b>1000.00₽</b></div>
+		    				</li>
+		    			</ul>
+		    			<div class="item-sidebar-cart-body-buttons pull-right">
+		    				<button class="buy-button">Купить</button>
+		    			</div>
+		    		</div>
+		    		<div class="item-sidebar-cart-coupon">
+		    			<h1>Использовать купон</h1>
+		    			<div class="item-sidebar-cart-coupon-body">
+		    				<div class="coupon">
+	        					<input type="text" placeholder="">
+	        					<button>OK</button>
+	        				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</section>
+
+<script src="{% static 'js/cart.js' %}"></script>
+
+{% endblock content %}

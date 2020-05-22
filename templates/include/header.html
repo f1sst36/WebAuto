@@ -1,0 +1,82 @@
+{% load i18n %}
+{% load static %}
+
+
+<header id="main_header">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header_label">
+                        <h2>MECHANIUM</h2>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header_second_label">
+                        <p>Car Repair</p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <ul class="header_menu">
+                        <li><a href="{% url 'main_page' %}">{% trans 'ГЛАВНАЯ' %}</a></li>
+                        <li><a href="#">УСЛУГИ</a></li>
+                        <!--<li><a href="#">О НАС</a></li>-->
+                        <li><a href="{% url 'shop_page' %}">{% trans 'МАГАЗИН' %}</a></li>
+                        <li><a href="#">{% trans 'ПРОЧЕЕ' %}</a></li>
+                        <li>
+                             <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                 <input name="next" type="hidden" value="{{ redirect_to }}">
+                                 <select name="language">
+                                     {% get_current_language as LANGUAGE_CODE %}
+                                     {% get_available_languages as LANGUAGES %}
+                                     {% get_language_info_list for LANGUAGES as languages %}
+                                     {% for language in languages %}
+                                         <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                                selected{% endif %}>
+                                            {{ language.name_local }} ({{ language.code }})
+                                         </option>
+                                     {% endfor %}
+                                 </select>
+                                 <input type="submit" value="Go">
+                                 </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1">
+                    <div class="header_icons_cart">
+                        <a href="{% url 'cart_page' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+
+                    <div class="inner_header_icons">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="slider_text">
+                    <h2>{% trans 'БЕСПЛАТНЫЙ' %}</h2>
+                    <h2>{% trans 'ТЕСТ ДРАЙВ' %}</h2>
+                    <h1>{% trans 'НАШИХ АВТО' %}</h1>
+                </div>
+                <a href="{% url 'test_drive' %}"><button class="slider_button">{% trans 'ЗАПИСАТЬСЯ' %}</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <!--<img class="slider_img" src="img/Auto___Audi__1_2.png" alt="3" data-name="picture">  Добавляй тэги img СВЕРХУ -->
+        <img class="slider_img" src="{% static 'img/slider-2.jpg' %}" alt="2" style="visibility: hidden;" data-name="picture">
+        <img class="slider_img" src="{% static 'img/slider-1.jpg' %}" alt="1" data-name="picture">
+        <div class="arrows">
+            <i class="fa fa-angle-left arr_left"></i>
+            <i class="fa fa-angle-right arr_right"></i>
+        </div>
+    </div>
+</header>

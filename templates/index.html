@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load i18n %}
 {% block content %}
 <section>
     <div class="container" id="under_slider_blocks">
@@ -103,9 +104,9 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <div class="our_stats_label">
-                    <h6>SOME STATISTICS ABOUT US</h6>
-                    <h2>AUTO REPAIR TECHNICAL STATISTICS</h2>
-                    <h1>YOU MUST KNOW</h1>
+                    <h6>{% trans 'SOME STATISTICS ABOUT US' %}</h6>
+                    <h2>{% trans 'AUTO REPAIR TECHNICAL STATISTICS' %}</h2>
+                    <h1>{% trans 'YOU MUST KNOW' %}</h1>
                 </div>
             </div>
             <div class="col-lg-2"></div>
@@ -114,19 +115,19 @@
             <div class="col-lg-4">
                 <div class="our_stats_info">
                     <span class="our_stats_number">10</span>
-                    <div class="our_stats_text">YEARS OF<br> <b>EXPERIENCE</b></div>
+                    <div class="our_stats_text">{% trans 'YEARS OF' %}<br> <b>{% trans 'EXPERIENCE' %}</b></div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="our_stats_info">
                     <span class="our_stats_number">3<span style="font-size: 0.8em; vertical-align: 8px;">2</span></span>
-                    <div class="our_stats_text">TECHNICIANS<br> <b>& WORKERS</b></div>
+                    <div class="our_stats_text">{% trans 'TECHNICIANS' %}<br> <b>{% trans '& WORKERS' %}</b></div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="our_stats_info">
                     <span class="our_stats_number"><span style="font-size: 0.8em; vertical-align: 7px;">2</span>57<span style="vertical-align: 8px;">8</span></span>
-                    <div class="our_stats_text">SATISFIED<br> <b>CUSTOMERS</b></div>
+                    <div class="our_stats_text">{% trans 'SATISFIED' %}<br> <b>{% trans 'CUSTOMERS' %}</b></div>
                 </div>
             </div>
         </div>
@@ -138,51 +139,51 @@
         <div class="row framme">
             <div class="col-lg-6 col-12 box">
                 <div class="row">
-                    <h2 class="gray_title">Our services</h2>
+                    <h2 class="gray_title">{% trans 'Our services' %}</h2>
                 </div>
                 <div class="row">
-                    <h2 class="wide_title">Below are some of</h2>
+                    <h2 class="wide_title">{% trans 'Below are some of' %}</h2>
                 </div>
                 <div class="row">
-                    <h2 class="many_auto">The many auto repair services we offer:</h2>
+                    <h2 class="many_auto">{% trans 'The many auto repair services we offer:' %}</h2>
                 </div>
                 <div class="row">
-                    <h2 class="text">Meet the skilled team of mechanics with over 5 years of immaculate experience in car
+                    <h2 class="text">{% trans 'Meet the skilled team of mechanics with over 5 years of immaculate experience in car
                         repair industry! We use only top quality parts, and are bent on making your road trips safe and comfortable!
-                        We’re always glad to assist you in these tasks.
+                        We’re always glad to assist you in these tasks.' %}
                     </h2>
                 </div>
                 <div style="height: 38px;">
                 </div>
                 <div class="row">
-                    <button class="slider_button btn">BOOK AN APPOINTMENT</button>
+                    <button class="slider_button btn">{% trans 'BOOK AN APPOINTMENT' %}</button>
                 </div>
             </div>
             <div class="col-lg-3 col-12">
                 <ul>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> FREE Loaner Cars</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> FREE Shuttle Service</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> General Auto Repair & Maintenance</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> General Auto Repair & Maintenance</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Manufacturer Recommended Service</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Brake Repair and Replacement</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Air Conditioning A/C Repair</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Tire Repair and Replacemend</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Fuel System Repair</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'FREE Loaner Cars' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'FREE Shuttle Service' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'General Auto Repair & Maintenance' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'General Auto Repair & Maintenance' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Manufacturer Recommended Service' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Brake Repair and Replacement' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Air Conditioning A/C Repair' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Tire Repair and Replacemend' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Fuel System Repair' %}</p></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-12">
                 <ul>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Starting and Charging Repair</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Wheel Alignment</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> CV Axles</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Computer Diagnostic Testing</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Vehicle Preventative Maintenance</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> State Emissions Inspection</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Emission Repair Facility</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Tune Up</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Oil Chacge</p></li>
-                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i> Brake Job / Brake Service</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Starting and Charging Repair' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Wheel Alignment' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'CV Axles' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Computer Diagnostic Testing' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Vehicle Preventative Maintenance' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'State Emissions Inspection' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Emission Repair Facility' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Tune Up' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Oil Change' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Brake Job / Brake Service' %}</p></li>
                 </ul>
             </div>
         </div>
@@ -192,38 +193,38 @@
     <div class="container">
         <div class="row framme">
             <div class="row how_it_works_label_1">
-                <h2 class="gray_title">How it works</h2>
+                <h2 class="gray_title">{% trans 'How it works' %}</h2>
             </div>
             <div class="row how_it_works_label_2">
-                <h2 class="wide_title">How it <strong>works</strong></h2>
+                <h2 class="wide_title">{% trans 'How it' %} <strong>{% trans 'works' %}</strong></h2>
             </div>
             <div class="row justify-content-between">
                 <div class="col-lg-3 col-md-6">
                     <div class="slot">
                         <img src="{% static 'img/carrepair-img-2.jpg' %}" alt="1">
-                        <h3><strong>Make an</strong></h3>
-                        <h3>Appointment</h3>
+                        <h3><strong>{% trans 'Make an' %}</strong></h3>
+                        <h3>{% trans 'Appointment' %}</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="slot">
                         <img src="{% static 'img/carrepair-img-3.jpg' %}" alt="2">
-                        <h3><strong>Select</strong></h3>
-                        <h3>Services</h3>
+                        <h3><strong>{% trans 'Select' %}</strong></h3>
+                        <h3>{% trans 'Services' %}</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="slot">
                         <img src="{% static 'img/carrepair-img-4.jpg' %}" alt="3">
-                        <h3><strong>Select quote</strong></h3>
-                        <h3>Confirm request</h3>
+                        <h3><strong>{% trans 'Select quote' %}</strong></h3>
+                        <h3>{% trans 'Confirm request' %}</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="slot">
                         <img src="{% static 'img/carrepair-img-5.jpg' %}" alt="4">
-                        <h3><strong>Get your</strong></h3>
-                        <h3>Car</h3>
+                        <h3><strong>{% trans 'Get your' %}</strong></h3>
+                        <h3>{% trans 'Car' %}</h3>
                     </div>
                 </div>
             </div>
@@ -239,16 +240,16 @@
             <div class="col-lg-9">
                 <div class="row our_latest_specials_content">
                     <div class="row">
-                        <h2 class="wide_title">Our latest specials</h2>
+                        <h2 class="wide_title">{% trans 'Our latest specials' %}</h2>
                     </div>
                     <div class="row">
-                        <h2 class="wide_title"><strong>Any service of $250 or more</strong></h2>
+                        <h2 class="wide_title"><strong>{% trans 'Any service of $250 or more' %}</strong></h2>
                     </div>
                     <div class="row">
-                        <p>We value our clients, that`s why we want to give you this special discount in order
-                            for you to use it to make your car more safe and feel confident when on the road!
+                        <p>{% trans 'We value our clients, that`s why we want to give you this special discount in order
+                            for you to use it to make your car more safe and feel confident when on the road!' %}
                         </p>
-                        <a href="#">Learn more</a>
+                        <a href="#">{% trans 'Learn more' %}</a>
                     </div>
                 </div>
             </div>
@@ -259,10 +260,10 @@
     <div class="container">
         <div class="row framme">
             <div class="row our_certified_label_1">
-                <h2 class="gray_title">Our certified</h2>
+                <h2 class="gray_title">{% trans 'Our certified' %}</h2>
             </div>
             <div class="row our_certified_label_2">
-                <h2 class="wide_title">Why choose <strong>certified service?</strong></h2>
+                <h2 class="wide_title">{% trans 'Why choose' %} <strong>{% trans 'certified service?' %}</strong></h2>
             </div>
             <div class="row justify-content-between">
                 <div class="col-lg-4">
@@ -271,10 +272,10 @@
                             <div class="our_certified_icon">
                                 <i class="fa fa-calculator our_certified_icon_fa" aria-hidden="true"></i>
                             </div>
-                            <h3><strong>Estimates</strong></h3>
+                            <h3><strong>{% trans 'Estimates' %}</strong></h3>
                             <p class="text">
-                                We are the service that estimates fairly the isues with the car
-                                and gives you the precise help you need to make your car safe!
+                                {% trans 'We are the service that estimates fairly the isues with the car
+                                and gives you the precise help you need to make your car safe!' %}
                             </p>
                         </div>
                     </div>
@@ -286,10 +287,10 @@
                                 <div class="our_certified_icon">
                                     <i class="fa fa-paste our_certified_icon_fa" aria-hidden="true"></i>
                                 </div>
-                                <h3><strong>Trusted</strong></h3>
+                                <h3><strong>{% trans 'Trusted' %}</strong></h3>
                                 <p class="text">
-                                    Lots of satisfled clients return to our certified service to get
-                                    help from our skilled car mechanics!
+                                    {% trans 'Lots of satisfled clients return to our certified service to get
+                                    help from our skilled car mechanics!' %}
                                 </p>
                             </div>
                         </div>
@@ -302,10 +303,10 @@
                                 <div class="our_certified_icon">
                                     <i class="fa fa-certificate our_certified_icon_fa" aria-hidden="true"></i>
                                 </div>
-                                <h3><strong>Guarantees</strong></h3>
+                                <h3><strong>{% trans 'Guarantees' %}</strong></h3>
                                 <p class="text">
-                                    We guarantee the quality of the work performed. That`s why we`re
-                                    ready yo solve any problem that arose again for free!
+                                    {% trans 'We guarantee the quality of the work performed. That`s why we`re
+                                    ready yo solve any problem that arose again for free!' %}
                                 </p>
                             </div>
                         </div>
@@ -343,10 +344,10 @@
     <div class="container">
         <div class="row framme">
             <div class="row our_certified_label_1">
-                <h2 class="gray_title">Testimonials</h2>
+                <h2 class="gray_title">{% trans 'Testimonials' %}</h2>
             </div>
             <div class="row our_certified_label_2">
-                <h2 class="wide_title">What our <strong>clients say</strong></h2>
+                <h2 class="wide_title">{% trans 'What our' %} <strong>{% trans 'clients say' %}</strong></h2>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -363,7 +364,7 @@
                                         service to everyone who looks for quality!
                                     </p>
                                     <h6>William Hill</h6>
-                                    <h6 class="testimonials_date">26 September, 2017</h6>
+                                    <h6 class="testimonials_date">26 {% trans 'September' %}, 2017</h6>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +384,7 @@
                                         with the prices here!
                                     </p>
                                     <h6>Brian Murdoch</h6>
-                                    <h6 class="testimonials_date">09 October, 2017</h6>
+                                    <h6 class="testimonials_date">09 {% trans 'October' %}, 2017</h6>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +404,7 @@
                                         gave me warranty.
                                     </p>
                                     <h6>Richard Smith</h6>
-                                    <h6 class="testimonials_date">01 September, 2017</h6>
+                                    <h6 class="testimonials_date">01 {% trans 'September' %}, 2017</h6>
                                 </div>
                             </div>
                         </div>
@@ -422,20 +423,20 @@
             <div class="col-lg-8">
                 <div class="schedule_appointment_content">
                     <div class="row schedule_appointment_label_1">
-                        <h2 class="wide_title">Shedule your appointment today</h2>
+                        <h2 class="wide_title">{% trans 'Shedule your appointment today' %}</h2>
                     </div>
                     <div class="row schedule_appointment_label_2">
-                        <h2 class="wide_title schedule_appointment_red_h"><strong>Call: 1-800-123-4567</strong></h2>
+                        <h2 class="wide_title schedule_appointment_red_h"><strong>{% trans 'Call' %}: 1-800-123-4567</strong></h2>
                     </div>
                     <div class="row schedule_appointment_label_3">
-                        <h6 class="text">Your Automotive Repair & Maintenance Service Specialist</h6>
+                        <h6 class="text">{% trans 'Your Automotive Repair & Maintenance Service Specialist' %}</h6>
                     </div>
                     <div class="row">
                         <div class="col" style="padding: 0;">
-                            <button class="slider_button btn">BOOK AN APPOINTMENT</button>
+                            <button class="slider_button btn">{% trans 'BOOK AN APPOINTMENT' %}</button>
                         </div>
                         <div class="col" style="padding: 0;">
-                            <button class="slider_button black_button btn">GET QUOTE</button>
+                            <button class="slider_button black_button btn">{% trans 'GET QUOTE' %}</button>
                         </div>
                     </div>
                 </div>
@@ -450,8 +451,8 @@
                 <div class="row">
                     <div class="col-2"><i class="fa fa-map-marker contacts_icon" aria-hidden="true"></i></div>
                     <div class="col-10">
-                        <h6>Address:</h6>
-                        <h6>4578 Marmora road, glasgow</h6>
+                        <h6>{% trans 'Address' %}:</h6>
+                        <h6>{% trans '4578 Marmora road, glasgow' %}</h6>
                     </div>
                 </div>
             </div>
@@ -459,7 +460,7 @@
                 <div class="row">
                     <div class="col-2"><i class="fa fa-phone contacts_icon" aria-hidden="true"></i></div>
                     <div class="col-10">
-                        <h6>Phones:</h6>
+                        <h6>{% trans 'Phones' %}:</h6>
                         <h6>+7-495-1234567; +7-495-1234568</h6>
                     </div>
                 </div>
@@ -468,8 +469,8 @@
                 <div class="row">
                     <div class="col-2"><i class="fa fa-clock-o contacts_icon" aria-hidden="true"></i></div>
                     <div class="col-10">
-                        <h6>Working time:</h6>
-                        <h6>Monday-saturday: 08:00-18:00;</h6>
+                        <h6>{% trans 'Working time' %}:</h6>
+                        <h6>{% trans 'Monday-saturday' %}: 08:00-18:00;</h6>
                     </div>
                 </div>
             </div>

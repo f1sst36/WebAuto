@@ -1560,3 +1560,88 @@ a {
 .rating input:checked ~ label:after{
     opacity: 1;
 }
+
+
+/* pop-language */
+
+.pop-language{
+    display: flex;
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    background-color: #c62f2d;
+    right: -200px;
+    bottom: 50px;
+    opacity: 0.7;
+
+    transition: right 0.3s ease-in-out;
+
+}
+
+.pop-language:hover{
+    right: 0px;
+    opacity: 1;
+}
+
+.pop-language-icon{
+    width: 20%;
+}
+
+.pop-language-icon i{
+    color: #fff;
+    font-size: 40px;
+    padding: 5px 0 0 8px;
+}
+
+.pop-language-body{
+    width: 80%;
+}
+
+.pop-language-body form{
+    display: flex;
+}
+
+.pop-language-button{
+    padding: 0;
+    width: 25%;
+    height: 50px;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    background-color: #1b242b;
+}
+
+.language-select{
+    position: relative;
+    width: 75%;
+}
+
+.language-select select{
+	display: block;
+    width: 100%;
+    height: 100%;
+    padding: .5rem 2.5rem .5rem 0.5rem;
+    background: #fff;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #444;
+    outline: none;
+}
+
+.language-select:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+}

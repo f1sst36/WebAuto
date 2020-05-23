@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-22 19:34+0300\n"
+"POT-Creation-Date: 2020-05-23 12:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,10 @@ msgstr ""
 #: .\templates\include\header.html:21
 msgid "ГЛАВНАЯ"
 msgstr "MAIN PAGE"
+
+#: .\templates\include\header.html:22
+msgid "УСЛУГИ"
+msgstr "SERVICES"
 
 #: .\templates\include\header.html:24
 msgid "МАГАЗИН"
@@ -53,3 +57,263 @@ msgstr "OUR CARS"
 #: .\templates\include\header.html:69
 msgid "ЗАПИСАТЬСЯ"
 msgstr "SIGN UP"
+
+#: .\templates\index.html:106
+msgid "SOME STATISTICS ABOUT US"
+msgstr ""
+
+#: .\templates\index.html:107
+msgid "AUTO REPAIR TECHNICAL STATISTICS"
+msgstr ""
+
+#: .\templates\index.html:108
+msgid "YOU MUST KNOW"
+msgstr ""
+
+#: .\templates\index.html:117
+msgid "YEARS OF"
+msgstr ""
+
+#: .\templates\index.html:117
+msgid "EXPERIENCE"
+msgstr ""
+
+#: .\templates\index.html:123
+msgid "TECHNICIANS"
+msgstr ""
+
+#: .\templates\index.html:123
+msgid "& WORKERS"
+msgstr ""
+
+#: .\templates\index.html:129
+msgid "SATISFIED"
+msgstr ""
+
+#: .\templates\index.html:129
+msgid "CUSTOMERS"
+msgstr ""
+
+#: .\templates\index.html:141
+msgid "Our services"
+msgstr ""
+
+#: .\templates\index.html:144
+msgid "Below are some of"
+msgstr ""
+
+#: .\templates\index.html:147
+msgid "The many auto repair services we offer:"
+msgstr ""
+
+#: .\templates\index.html:158 .\templates\index.html:435
+msgid "BOOK AN APPOINTMENT"
+msgstr ""
+
+#: .\templates\index.html:163
+msgid "FREE Loaner Cars"
+msgstr ""
+
+#: .\templates\index.html:164
+msgid "FREE Shuttle Service"
+msgstr ""
+
+#: .\templates\index.html:165 .\templates\index.html:166
+msgid "General Auto Repair & Maintenance"
+msgstr ""
+
+#: .\templates\index.html:167
+msgid "Manufacturer Recommended Service"
+msgstr ""
+
+#: .\templates\index.html:168
+msgid "Brake Repair and Replacement"
+msgstr ""
+
+#: .\templates\index.html:169
+msgid "Air Conditioning A/C Repair"
+msgstr ""
+
+#: .\templates\index.html:170
+msgid "Tire Repair and Replacemend"
+msgstr ""
+
+#: .\templates\index.html:171
+msgid "Fuel System Repair"
+msgstr ""
+
+#: .\templates\index.html:176
+msgid "Starting and Charging Repair"
+msgstr ""
+
+#: .\templates\index.html:177
+msgid "Wheel Alignment"
+msgstr ""
+
+#: .\templates\index.html:178
+msgid "CV Axles"
+msgstr ""
+
+#: .\templates\index.html:179
+msgid "Computer Diagnostic Testing"
+msgstr ""
+
+#: .\templates\index.html:180
+msgid "Vehicle Preventative Maintenance"
+msgstr ""
+
+#: .\templates\index.html:181
+msgid "State Emissions Inspection"
+msgstr ""
+
+#: .\templates\index.html:182
+msgid "Emission Repair Facility"
+msgstr ""
+
+#: .\templates\index.html:183
+msgid "Tune Up"
+msgstr ""
+
+#: .\templates\index.html:184
+msgid "Oil Change"
+msgstr ""
+
+#: .\templates\index.html:185
+msgid "Brake Job / Brake Service"
+msgstr ""
+
+#: .\templates\index.html:195
+msgid "How it works"
+msgstr ""
+
+#: .\templates\index.html:198
+msgid "How it"
+msgstr ""
+
+#: .\templates\index.html:198
+msgid "works"
+msgstr ""
+
+#: .\templates\index.html:204
+msgid "Make an"
+msgstr ""
+
+#: .\templates\index.html:205
+msgid "Appointment"
+msgstr ""
+
+#: .\templates\index.html:211
+msgid "Select"
+msgstr ""
+
+#: .\templates\index.html:212
+msgid "Services"
+msgstr ""
+
+#: .\templates\index.html:218
+msgid "Select quote"
+msgstr ""
+
+#: .\templates\index.html:219
+msgid "Confirm request"
+msgstr ""
+
+#: .\templates\index.html:225
+msgid "Get your"
+msgstr ""
+
+#: .\templates\index.html:226
+msgid "Car"
+msgstr ""
+
+#: .\templates\index.html:242
+msgid "Our latest specials"
+msgstr ""
+
+#: .\templates\index.html:245
+msgid "Any service of $250 or more"
+msgstr ""
+
+#: .\templates\index.html:251
+msgid "Learn more"
+msgstr ""
+
+#: .\templates\index.html:262
+msgid "Our certified"
+msgstr ""
+
+#: .\templates\index.html:265
+msgid "Why choose"
+msgstr ""
+
+#: .\templates\index.html:265
+msgid "certified service?"
+msgstr ""
+
+#: .\templates\index.html:274
+msgid "Estimates"
+msgstr ""
+
+#: .\templates\index.html:289
+msgid "Trusted"
+msgstr ""
+
+#: .\templates\index.html:305
+msgid "Guarantees"
+msgstr ""
+
+#: .\templates\index.html:346
+msgid "Testimonials"
+msgstr ""
+
+#: .\templates\index.html:349
+msgid "What our"
+msgstr ""
+
+#: .\templates\index.html:349
+msgid "clients say"
+msgstr ""
+
+#: .\templates\index.html:366 .\templates\index.html:406
+msgid "September"
+msgstr ""
+
+#: .\templates\index.html:386
+msgid "October"
+msgstr ""
+
+#: .\templates\index.html:425
+msgid "Shedule your appointment today"
+msgstr ""
+
+#: .\templates\index.html:428
+msgid "Call"
+msgstr ""
+
+#: .\templates\index.html:431
+msgid "Your Automotive Repair & Maintenance Service Specialist"
+msgstr ""
+
+#: .\templates\index.html:438
+msgid "GET QUOTE"
+msgstr ""
+
+#: .\templates\index.html:453
+msgid "Address"
+msgstr ""
+
+#: .\templates\index.html:454
+msgid "4578 Marmora road, glasgow"
+msgstr ""
+
+#: .\templates\index.html:462
+msgid "Phones"
+msgstr ""
+
+#: .\templates\index.html:471
+msgid "Working time"
+msgstr ""
+
+#: .\templates\index.html:472
+msgid "Monday-saturday"
+msgstr ""

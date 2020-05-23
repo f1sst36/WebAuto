@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="pop-language">
+    <div class="pop-language-icon">
+        <i class="fa fa-language" aria-hidden="true"></i>
+    </div>
+    <div class="pop-language-body">
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <div class="language-select">
+                <select name="language">
+                     {% get_current_language as LANGUAGE_CODE %}
+                     {% get_available_languages as LANGUAGES %}
+                     {% get_language_info_list for LANGUAGES as languages %}
+                     {% for language in languages %}
+                         <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                         </option>
+                     {% endfor %}
+                 </select>
+            </div>
+             <button class="pop-language-button" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+         </form>
+    </div>
+</div>

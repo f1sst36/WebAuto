@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 12:00+0300\n"
+"POT-Creation-Date: 2020-05-23 18:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,294 +26,309 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\templates\include\header.html:21
+#: .\templates\include\header.html:20
 msgid "ГЛАВНАЯ"
 msgstr "MAIN PAGE"
 
-#: .\templates\include\header.html:22
+#: .\templates\include\header.html:21
 msgid "УСЛУГИ"
 msgstr "SERVICES"
 
-#: .\templates\include\header.html:24
+#: .\templates\include\header.html:23
 msgid "МАГАЗИН"
 msgstr "SHOP"
 
-#: .\templates\include\header.html:25
+#: .\templates\include\header.html:24
 msgid "ПРОЧЕЕ"
 msgstr "OTHER"
 
-#: .\templates\include\header.html:65
+#: .\templates\include\header.html:47
 msgid "БЕСПЛАТНЫЙ"
 msgstr "FREE"
 
-#: .\templates\include\header.html:66
+#: .\templates\include\header.html:48
 msgid "ТЕСТ ДРАЙВ"
 msgstr "TEST DRIVE OF"
 
-#: .\templates\include\header.html:67
+#: .\templates\include\header.html:49
 msgid "НАШИХ АВТО"
 msgstr "OUR CARS"
 
-#: .\templates\include\header.html:69
+#: .\templates\include\header.html:51 .\templates\index.html:151
 msgid "ЗАПИСАТЬСЯ"
 msgstr "SIGN UP"
 
-#: .\templates\index.html:106
-msgid "SOME STATISTICS ABOUT US"
+#: .\templates\index.html:103
+msgid "СТАТИСТИКА О НАС"
+msgstr "STATISTICS ABOUT US"
+
+#: .\templates\index.html:104
+msgid "ВЫ ДОЛЖНЫ ЗНАТЬ"
+msgstr "YOU SHOULD KNOW"
+
+#: .\templates\index.html:114
+msgid "ЛЕТ"
+msgstr "YEARS"
+
+#: .\templates\index.html:114
+msgid "ОПЫТА"
 msgstr ""
 
-#: .\templates\index.html:107
-msgid "AUTO REPAIR TECHNICAL STATISTICS"
+#: .\templates\index.html:120
+msgid "МЕХАНИКОВ"
 msgstr ""
 
-#: .\templates\index.html:108
-msgid "YOU MUST KNOW"
+#: .\templates\index.html:120
+msgid "&РАБОТНИКОВ"
 msgstr ""
 
-#: .\templates\index.html:117
-msgid "YEARS OF"
+#: .\templates\index.html:126
+msgid "ДОВОЛЬНЫХ"
 msgstr ""
 
-#: .\templates\index.html:117
-msgid "EXPERIENCE"
+#: .\templates\index.html:126
+msgid "КЛИЕНТОВ"
 msgstr ""
 
-#: .\templates\index.html:123
-msgid "TECHNICIANS"
-msgstr ""
-
-#: .\templates\index.html:123
-msgid "& WORKERS"
-msgstr ""
-
-#: .\templates\index.html:129
-msgid "SATISFIED"
-msgstr ""
-
-#: .\templates\index.html:129
-msgid "CUSTOMERS"
+#: .\templates\index.html:138
+msgid "Наш сервис"
 msgstr ""
 
 #: .\templates\index.html:141
-msgid "Our services"
+msgid "Вы можете ознакомится"
 msgstr ""
 
 #: .\templates\index.html:144
-msgid "Below are some of"
+msgid "С услугами которые мы предлагаем:"
 msgstr ""
 
 #: .\templates\index.html:147
-msgid "The many auto repair services we offer:"
+msgid ""
+"Познакомьтесь с квалифицированной командой механиков с более чем 5-летним "
+"безупречным опытом работы в сфере ремонта автомобилей! Мы используем только "
+"высококачественные запчасти и стремимся сделать ваши поездки безопасными и "
+"комфортными! Мы всегда рады помочь вам в решении этих задач."
 msgstr ""
 
-#: .\templates\index.html:158 .\templates\index.html:435
-msgid "BOOK AN APPOINTMENT"
+#: .\templates\index.html:156
+msgid "Бесплатная аренда автомобилей"
+msgstr ""
+
+#: .\templates\index.html:157
+msgid "Бесплатный трансфер"
+msgstr ""
+
+#: .\templates\index.html:158 .\templates\index.html:159
+msgid "Общий Ремонт И Техническое Обслуживание Автомобилей"
+msgstr ""
+
+#: .\templates\index.html:160
+msgid "Рекомендуемое Производителем Обслуживание"
+msgstr ""
+
+#: .\templates\index.html:161
+msgid "Ремонт и замена тормозов"
+msgstr ""
+
+#: .\templates\index.html:162
+msgid "Ремонт Кондиционера Воздуха"
 msgstr ""
 
 #: .\templates\index.html:163
-msgid "FREE Loaner Cars"
+msgid "Ремонт и замена шин"
 msgstr ""
 
 #: .\templates\index.html:164
-msgid "FREE Shuttle Service"
-msgstr ""
-
-#: .\templates\index.html:165 .\templates\index.html:166
-msgid "General Auto Repair & Maintenance"
-msgstr ""
-
-#: .\templates\index.html:167
-msgid "Manufacturer Recommended Service"
-msgstr ""
-
-#: .\templates\index.html:168
-msgid "Brake Repair and Replacement"
+msgid "Ремонт Топливной Системы"
 msgstr ""
 
 #: .\templates\index.html:169
-msgid "Air Conditioning A/C Repair"
+msgid "Пуско-наладочный ремонт"
 msgstr ""
 
 #: .\templates\index.html:170
-msgid "Tire Repair and Replacemend"
+msgid "Выравнивание Колес"
 msgstr ""
 
 #: .\templates\index.html:171
-msgid "Fuel System Repair"
+msgid "Резюме цапф"
+msgstr ""
+
+#: .\templates\index.html:172
+msgid "Компьютерное Диагностическое Тестирование"
+msgstr ""
+
+#: .\templates\index.html:173
+msgid "Профилактическое Обслуживание Транспортных Средств"
+msgstr ""
+
+#: .\templates\index.html:174
+msgid "Государственная Инспекция Выбросов"
+msgstr ""
+
+#: .\templates\index.html:175
+msgid "Установка Для Ремонта Выбросов"
 msgstr ""
 
 #: .\templates\index.html:176
-msgid "Starting and Charging Repair"
+msgid "Настройка"
 msgstr ""
 
 #: .\templates\index.html:177
-msgid "Wheel Alignment"
+msgid "Замена Масла"
 msgstr ""
 
 #: .\templates\index.html:178
-msgid "CV Axles"
+msgid "Тормозная Работа / Обслуживание Тормозов"
 msgstr ""
 
-#: .\templates\index.html:179
-msgid "Computer Diagnostic Testing"
+#: .\templates\index.html:188
+msgid "Процесс покупки авто"
 msgstr ""
 
-#: .\templates\index.html:180
-msgid "Vehicle Preventative Maintenance"
+#: .\templates\index.html:191
+msgid "Как это"
 msgstr ""
 
-#: .\templates\index.html:181
-msgid "State Emissions Inspection"
+#: .\templates\index.html:191
+msgid "работает"
 msgstr ""
 
-#: .\templates\index.html:182
-msgid "Emission Repair Facility"
-msgstr ""
-
-#: .\templates\index.html:183
-msgid "Tune Up"
-msgstr ""
-
-#: .\templates\index.html:184
-msgid "Oil Change"
-msgstr ""
-
-#: .\templates\index.html:185
-msgid "Brake Job / Brake Service"
-msgstr ""
-
-#: .\templates\index.html:195
-msgid "How it works"
+#: .\templates\index.html:197
+msgid "Приходите в"
 msgstr ""
 
 #: .\templates\index.html:198
-msgid "How it"
-msgstr ""
-
-#: .\templates\index.html:198
-msgid "works"
+msgid "Автосалон"
 msgstr ""
 
 #: .\templates\index.html:204
-msgid "Make an"
+msgid "Выбираете"
 msgstr ""
 
-#: .\templates\index.html:205
-msgid "Appointment"
+#: .\templates\index.html:205 .\templates\index.html:219
+msgid "Автомобиль"
 msgstr ""
 
 #: .\templates\index.html:211
-msgid "Select"
+msgid "Совершите"
 msgstr ""
 
 #: .\templates\index.html:212
-msgid "Services"
+msgid "Покупку"
 msgstr ""
 
 #: .\templates\index.html:218
-msgid "Select quote"
+msgid "Получите ваш"
 msgstr ""
 
-#: .\templates\index.html:219
-msgid "Confirm request"
+#: .\templates\index.html:235
+msgid "Наши акции"
 msgstr ""
 
-#: .\templates\index.html:225
-msgid "Get your"
-msgstr ""
-
-#: .\templates\index.html:226
-msgid "Car"
+#: .\templates\index.html:238
+msgid "Скидка на все услуги сервиса"
 msgstr ""
 
 #: .\templates\index.html:242
-msgid "Our latest specials"
+msgid ""
+"Мы ценим наших клиентов, поэтому мы хотим предоставить вам эту специальную "
+"скидку, чтобы вы могли использовать ее, чтобы сделать свой автомобиль более "
+"безопасным и чувствовать себя уверенно в дороге!"
 msgstr ""
 
-#: .\templates\index.html:245
-msgid "Any service of $250 or more"
-msgstr ""
-
-#: .\templates\index.html:251
+#: .\templates\index.html:244
 msgid "Learn more"
 msgstr ""
 
-#: .\templates\index.html:262
-msgid "Our certified"
+#: .\templates\index.html:255
+msgid "Наши гарантии"
 msgstr ""
 
-#: .\templates\index.html:265
-msgid "Why choose"
+#: .\templates\index.html:258
+msgid "Почему вы должны"
 msgstr ""
 
-#: .\templates\index.html:265
-msgid "certified service?"
+#: .\templates\index.html:258
+msgid "выбрать нас?"
 msgstr ""
 
-#: .\templates\index.html:274
-msgid "Estimates"
+#: .\templates\index.html:267
+msgid "Развитие"
 msgstr ""
 
-#: .\templates\index.html:289
-msgid "Trusted"
+#: .\templates\index.html:269
+msgid ""
+"Автосалон AUDI Store - это команда единомышленников и самый "
+"быстроразвивающийся автосалон по продаже автомобилей."
 msgstr ""
 
-#: .\templates\index.html:305
-msgid "Guarantees"
+#: .\templates\index.html:281
+msgid "Доверие"
 msgstr ""
 
-#: .\templates\index.html:346
-msgid "Testimonials"
+#: .\templates\index.html:283
+msgid ""
+"Множество довольных клиентов возвращаются в наш автосалон, чтобы получить "
+"новое авто по низкой цене!"
 msgstr ""
 
-#: .\templates\index.html:349
-msgid "What our"
+#: .\templates\index.html:296
+msgid "Гарантии"
 msgstr ""
 
-#: .\templates\index.html:349
-msgid "clients say"
+#: .\templates\index.html:298
+msgid ""
+"Мы гарантируем что ваш автомобиль прослужит дольше чем это указано в "
+"договоре о покупке!"
 msgstr ""
 
-#: .\templates\index.html:366 .\templates\index.html:406
+#: .\templates\index.html:336
+msgid "Отзывы"
+msgstr ""
+
+#: .\templates\index.html:339
+msgid "Что наши"
+msgstr ""
+
+#: .\templates\index.html:339
+msgid "клиенты говорят"
+msgstr ""
+
+#: .\templates\index.html:354 .\templates\index.html:390
 msgid "September"
 msgstr ""
 
-#: .\templates\index.html:386
+#: .\templates\index.html:372
 msgid "October"
 msgstr ""
 
-#: .\templates\index.html:425
-msgid "Shedule your appointment today"
+#: .\templates\index.html:409
+msgid "Запишитесь на тест-драйв"
 msgstr ""
 
-#: .\templates\index.html:428
-msgid "Call"
+#: .\templates\index.html:412
+msgid "Позвонить"
 msgstr ""
 
-#: .\templates\index.html:431
-msgid "Your Automotive Repair & Maintenance Service Specialist"
+#: .\templates\index.html:415
+msgid ""
+"Выберите автомобиль, который наилучшим образом соответствует вашим "
+"потребностям."
 msgstr ""
 
-#: .\templates\index.html:438
+#: .\templates\index.html:419
+msgid "Записаться"
+msgstr ""
+
+#: .\templates\index.html:422
 msgid "GET QUOTE"
 msgstr ""
 
-#: .\templates\index.html:453
-msgid "Address"
+#: .\templates\index.html:438
+msgid "Ул. Университетская 33"
 msgstr ""
 
-#: .\templates\index.html:454
-msgid "4578 Marmora road, glasgow"
-msgstr ""
-
-#: .\templates\index.html:462
-msgid "Phones"
-msgstr ""
-
-#: .\templates\index.html:471
-msgid "Working time"
-msgstr ""
-
-#: .\templates\index.html:472
-msgid "Monday-saturday"
+#: .\templates\index.html:456
+msgid "Понедельник-Пятница"
 msgstr ""

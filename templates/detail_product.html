@@ -101,24 +101,35 @@
                   </table>
             </div>
             <div class="product_info_content prod_review">
-                <div class="row user_reviews">
-                    <div class="row">
-                        <h5>Виктор</h5>
-                    </div>
-                    <div class="row">
-                        <div class="review_box">
-                            <h6>22.05.2020</h6>
-                            <p class="text">Наишикарнейший товар. Просто сказка!</p>
+                {% if not product.reviews_set.all %}
+                    <div class="row user_reviews">
+                        <div class="row">
+                            <div class="review_box">
+                                <p class="text">Отзывов пока нет, новы можете стать первым!</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endif %}
+                {% for review in product.reviews_set.all %}
+                    <div class="row user_reviews">
+                        <div class="row">
+                            <h5>{{ review.name }}</h5>
+                        </div>
+                        <div class="row">
+                            <div class="review_box">
+                                <h6>{{ review.date }}</h6>
+                                <p class="text">{{ review.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
                 <div class="row review_main_label">
                     <h4>Оставьте отзыв</h4>
                 </div>
-                <form>
+                <form action="{% url 'add_review' product.slug %}" method="post">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label for="" style="margin: 0;"><strong>Оцените товар</strong></label>
-
                         <div class="rating">
                             <input type="radio" name="star" id="star1"><label for="star1">
                             </label>
@@ -134,21 +145,21 @@
                     </div>
                     <div class="form-group" style="margin-top: 40px;">
                       <label for="exampleFormControlSelect1">Имя*</label>
-                      <input class="form-control" type="text" placeholder="">
+                      <input class="form-control" name="name" type="text" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email*</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
                       </div>
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1">Ваш отзыв</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
                     <div class="form-group" style="margin-top: 30px;">
                         <button type="submit" class="btn btn-primary">Отправить</button>
                         <button type="reset" class="btn btn-primary" id="prod_reset_btn">Очистить</button>
                     </div>
-                  </form>
+                </form>
             </div>
         </div>
     </div>

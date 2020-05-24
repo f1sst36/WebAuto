@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Product, Reviews
+from .models import User, Product, Reviews, TestDrive
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -15,6 +15,10 @@ class ProductAdmin(TranslationAdmin):
 
 @admin.register(Reviews)
 class ReviewsAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(TestDrive)
+class TestDriveAdmin(admin.ModelAdmin):
     pass
 
 

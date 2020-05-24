@@ -17,51 +17,52 @@
 <section class="testdrive_form">
     <div class="container">
         <div class="testdrive_content">
-            <form action="testdrive.html">
+            <form action="{% url 'record_on_test_drive' %}" method="post">
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
                         <div class="select_model">
-                            <select class="form-control">
+                            <select name="car_model" class="form-control">
                                 <option>Выберите модель авто*</option>
-                                <option>Модель 1</option>
-                                <option>Модель 2</option>
-                                <option>Модель 3</option>
-                                <option>Модель 4</option>
-                                <option>Модель 5</option>
+                                <option value="AUDI A3 Sportback">AUDI A3 Sportback</option>
+                                <option value="AUDI Q7 TDI">AUDI Q7 TDI</option>
+                                <option value="AUDI SQ8">AUDI SQ8</option>
+                                <option value="AUDI Q3 Sportback">AUDI Q3 Sportback</option>
+                                <option value="AUDI A8 L">AUDI A8 L</option>
                             </select>
                         </div>
                         <div class="select_model">
-                            <select class="form-control">
+                            <select name="time" class="form-control">
                                 <option>Выберите время*</option>
-                                <option>9:00</option>
-                                <option>10:00</option>
-                                <option>11:00</option>
-                                <option>12:00</option>
-                                <option>14:00</option>
-                                <option>15:00</option>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
                             </select>
                         </div>
                         <div class="input_div" style="color: #999;">
-                            <input type="date" class="input">
+                            <input name="date" type="date" class="input">
                         </div>
                         <p class="text">* Обязательное поле</p>
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="input_div one">
                             <h5>Имя*</h5>
-                            <input type="text" class="input">
+                            <input name="name" type="text" class="input">
                         </div>
                         <div class="input_div two">
                             <h5>Фамилия*</h5>
-                            <input type="text" class="input">
+                            <input name="surname" type="text" class="input">
                         </div>
                         <div class="input_div three">
                             <h5>Email</h5>
-                            <input type="text" class="input">
+                            <input name="mail" type="text" class="input">
                         </div>
                         <div class="input_div four">
                             <h5>Телефон*</h5>
-                            <input type="text" class="input">
+                            <input name="phone" type="text" class="input">
                         </div>
                     </div>
                 </div>

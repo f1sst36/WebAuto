@@ -43,17 +43,34 @@ class Product(models.Model):
 
 class Reviews(models.Model):
     # Отзывы
-    id = models.PositiveIntegerField("Идентификатор", unique=True, primary_key=True)
     text = models.TextField("Отзыв")
     name = models.CharField('Имя', max_length=200)
     mail = models.EmailField('Почта')
-    date = models.DateTimeField('Дата публикации')
+    date = models.DateTimeField('Дата публикации', null=True)
     product = models.ForeignKey(Product, verbose_name='Товар', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.id
+        return f"{self.name} - {self.product}"
 
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
 
+
+class TestDrive(models.Model):
+    # Записи на тест драйв
+    name = models.CharField('Имя', max_length=200)
+    surname = models.CharField('Фамилия', max_length=200)
+    mail = models.EmailField('Почта')
+    phone = models.CharField('Телефон', max_length=100)
+    car_model = models.CharField('Модель авто', max_length=100)
+    time = models.CharField('Время', max_length=50)
+    date = models.DateTimeField('Дата')
+    send_data = models.DateTimeField('Дата отправки заявки', default=None)
+
+    def __str__(self):
+        return f"{self.name} - {self.car_model}"
+
+    class Meta:
+        verbose_name = "Запись на тест драйв"
+        verbose_name_plural = "Записи на тест драйв"

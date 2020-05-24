@@ -1,8 +1,11 @@
+import datetime
 from django.views.generic import ListView, DetailView
+from django.core.mail import send_mail
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
+from .forms import ReviewsForm, TestDriveForm
 from .models import Product
 
 
@@ -62,6 +65,34 @@ class ProductView(DetailView):
     template_name = "detail_product.html"
 
 
+class AddReview(View):
+    def post(self, request, slug):
+        form = ReviewsForm(request.POST)
+        prod = Product.objects.get(slug=slug)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.product = prod
+            form.date = datetime.datetime.now()
+            form.save()
+        return redirect(prod.get_absolute_url())
+
+
 class TestDriveView(View):
     def get(self, request):
         return render(request, "test_drive.html", context=None)
+
+
+class RecordTestDrive(View):
+    def post(self, request):
+        form = TestDriveForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            now = datetime.datetime.now()
+            form.send_data = now
+            form.save()
+            send_mail('AUDI Store запись на тест драйв', f"Здравствуйте, {form.name}."
+                                                         f"\nВы были записаны на тест-драйв автомобиля {form.car_model}. "
+                                                         f"\nПросим явится вас в наш автосалон {form.date.day} числа ({form.date.month} месяца) в {form.time}."
+                                                         f"\nТак же, в ближайщее время с вами свяжется наш сотрудник чтобы обсудить детали.",
+                      'audistoreshowroom@gmail.com', [form.mail], fail_silently=False)
+        return redirect('main_page')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 18:25+0300\n"
+"POT-Creation-Date: 2020-05-24 11:27+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,10 @@ msgstr ""
 #: .\WebAuto\settings.py:120
 msgid "English"
 msgstr ""
+
+#: .\templates\include\header.html:15 .\templates\index.html:198
+msgid "Автосалон"
+msgstr "car showroom"
 
 #: .\templates\include\header.html:20
 msgid "ГЛАВНАЯ"
@@ -72,35 +76,35 @@ msgstr "YEARS"
 
 #: .\templates\index.html:114
 msgid "ОПЫТА"
-msgstr ""
+msgstr "EXPERIENCE'S"
 
 #: .\templates\index.html:120
 msgid "МЕХАНИКОВ"
-msgstr ""
+msgstr "MECHANICS"
 
 #: .\templates\index.html:120
 msgid "&РАБОТНИКОВ"
-msgstr ""
+msgstr "WORKERS"
 
 #: .\templates\index.html:126
 msgid "ДОВОЛЬНЫХ"
-msgstr ""
+msgstr "PLEASED"
 
 #: .\templates\index.html:126
 msgid "КЛИЕНТОВ"
-msgstr ""
+msgstr "CLIENTS"
 
 #: .\templates\index.html:138
 msgid "Наш сервис"
-msgstr ""
+msgstr "Our service"
 
 #: .\templates\index.html:141
 msgid "Вы можете ознакомится"
-msgstr ""
+msgstr "You can get acquainted with"
 
 #: .\templates\index.html:144
 msgid "С услугами которые мы предлагаем:"
-msgstr ""
+msgstr "With the services we offer:"
 
 #: .\templates\index.html:147
 msgid ""
@@ -109,126 +113,126 @@ msgid ""
 "высококачественные запчасти и стремимся сделать ваши поездки безопасными и "
 "комфортными! Мы всегда рады помочь вам в решении этих задач."
 msgstr ""
+"Meet a qualified team of mechanics with more than 5 years of experience "
+"impeccable experience in the field of car repair! We only use high-quality "
+"spare parts and strive to make your trips safe and comfortable! We are "
+"always happy to help you solve these problems."
 
 #: .\templates\index.html:156
 msgid "Бесплатная аренда автомобилей"
-msgstr ""
+msgstr "Free car rental"
 
 #: .\templates\index.html:157
 msgid "Бесплатный трансфер"
-msgstr ""
+msgstr "Free shuttle service"
 
 #: .\templates\index.html:158 .\templates\index.html:159
 msgid "Общий Ремонт И Техническое Обслуживание Автомобилей"
-msgstr ""
+msgstr "General Car Repair And Maintenance"
 
 #: .\templates\index.html:160
 msgid "Рекомендуемое Производителем Обслуживание"
-msgstr ""
+msgstr "Manufacturer's Recommended Maintenance"
 
 #: .\templates\index.html:161
 msgid "Ремонт и замена тормозов"
-msgstr ""
+msgstr "Brake repair and replacement"
 
 #: .\templates\index.html:162
 msgid "Ремонт Кондиционера Воздуха"
-msgstr ""
+msgstr "Air Conditioner Repair"
 
 #: .\templates\index.html:163
 msgid "Ремонт и замена шин"
-msgstr ""
+msgstr "Tire repair and replacement"
 
 #: .\templates\index.html:164
 msgid "Ремонт Топливной Системы"
-msgstr ""
+msgstr "Fuel System Repair"
 
 #: .\templates\index.html:169
 msgid "Пуско-наладочный ремонт"
-msgstr ""
+msgstr "Start-up and adjustment repairs"
 
 #: .\templates\index.html:170
 msgid "Выравнивание Колес"
-msgstr ""
+msgstr "The Alignment Of The Wheels"
 
 #: .\templates\index.html:171
 msgid "Резюме цапф"
-msgstr ""
+msgstr "A summary of the axles"
 
 #: .\templates\index.html:172
 msgid "Компьютерное Диагностическое Тестирование"
-msgstr ""
+msgstr "Computer Diagnostic Testing"
 
 #: .\templates\index.html:173
 msgid "Профилактическое Обслуживание Транспортных Средств"
-msgstr ""
+msgstr "Preventive Maintenance Of Vehicles"
 
 #: .\templates\index.html:174
 msgid "Государственная Инспекция Выбросов"
-msgstr ""
+msgstr "State Emission Inspection"
 
 #: .\templates\index.html:175
 msgid "Установка Для Ремонта Выбросов"
-msgstr ""
+msgstr "Installation For The Repair Of Emission"
 
 #: .\templates\index.html:176
 msgid "Настройка"
-msgstr ""
+msgstr "Customization"
 
 #: .\templates\index.html:177
 msgid "Замена Масла"
-msgstr ""
+msgstr "oil change"
 
 #: .\templates\index.html:178
 msgid "Тормозная Работа / Обслуживание Тормозов"
-msgstr ""
+msgstr "Brake Operation / Maintenance"
 
 #: .\templates\index.html:188
 msgid "Процесс покупки авто"
-msgstr ""
+msgstr "The process of buying a car"
 
 #: .\templates\index.html:191
 msgid "Как это"
-msgstr ""
+msgstr "How to it"
 
 #: .\templates\index.html:191
 msgid "работает"
-msgstr ""
+msgstr "works"
 
 #: .\templates\index.html:197
 msgid "Приходите в"
-msgstr ""
-
-#: .\templates\index.html:198
-msgid "Автосалон"
-msgstr ""
+msgstr "Come to"
 
 #: .\templates\index.html:204
 msgid "Выбираете"
-msgstr ""
+msgstr "Choose"
 
 #: .\templates\index.html:205 .\templates\index.html:219
 msgid "Автомобиль"
-msgstr ""
+msgstr "Car"
 
 #: .\templates\index.html:211
 msgid "Совершите"
-msgstr ""
+msgstr "Commit"
 
 #: .\templates\index.html:212
 msgid "Покупку"
-msgstr ""
+msgstr "Purchase"
 
 #: .\templates\index.html:218
 msgid "Получите ваш"
-msgstr ""
+msgstr "Get your"
 
 #: .\templates\index.html:235
 msgid "Наши акции"
-msgstr ""
+msgstr "Our promotion"
 
 #: .\templates\index.html:238
 msgid "Скидка на все услуги сервиса"
-msgstr ""
+msgstr "Discount on all services of the service"
 
 #: .\templates\index.html:242
 msgid ""
@@ -236,99 +240,110 @@ msgid ""
 "скидку, чтобы вы могли использовать ее, чтобы сделать свой автомобиль более "
 "безопасным и чувствовать себя уверенно в дороге!"
 msgstr ""
+"We value our customers, so we want to provide you with this special a "
+"discount so you can use it to make your car more safe and feel confident on "
+"the road!"
 
-#: .\templates\index.html:244
-msgid "Learn more"
-msgstr ""
-
-#: .\templates\index.html:255
+#: .\templates\index.html:254
 msgid "Наши гарантии"
-msgstr ""
+msgstr "Our guarantee"
 
-#: .\templates\index.html:258
+#: .\templates\index.html:257
 msgid "Почему вы должны"
-msgstr ""
+msgstr "Why should you"
 
-#: .\templates\index.html:258
+#: .\templates\index.html:257
 msgid "выбрать нас?"
-msgstr ""
+msgstr "choose us?"
 
-#: .\templates\index.html:267
+#: .\templates\index.html:266
 msgid "Развитие"
-msgstr ""
+msgstr "Development"
 
-#: .\templates\index.html:269
+#: .\templates\index.html:268
 msgid ""
 "Автосалон AUDI Store - это команда единомышленников и самый "
 "быстроразвивающийся автосалон по продаже автомобилей."
 msgstr ""
+"AUDI Store car dealership is a team of like-minded people and the most fast-"
+"growing car dealership for the sale of cars."
 
-#: .\templates\index.html:281
+#: .\templates\index.html:280
 msgid "Доверие"
-msgstr ""
+msgstr "Trust"
 
-#: .\templates\index.html:283
+#: .\templates\index.html:282
 msgid ""
 "Множество довольных клиентов возвращаются в наш автосалон, чтобы получить "
 "новое авто по низкой цене!"
 msgstr ""
+"A lot of satisfied customers return to our dealership to get new car at a "
+"low price!"
 
-#: .\templates\index.html:296
+#: .\templates\index.html:295
 msgid "Гарантии"
-msgstr ""
+msgstr "Guarantees"
 
-#: .\templates\index.html:298
+#: .\templates\index.html:297
 msgid ""
 "Мы гарантируем что ваш автомобиль прослужит дольше чем это указано в "
 "договоре о покупке!"
 msgstr ""
+"We guarantee that your car will last longer than specified in the purchase "
+"agreement!"
 
-#: .\templates\index.html:336
+#: .\templates\index.html:335
 msgid "Отзывы"
-msgstr ""
+msgstr "Reviews"
 
-#: .\templates\index.html:339
+#: .\templates\index.html:338
 msgid "Что наши"
-msgstr ""
+msgstr "What's ours"
 
-#: .\templates\index.html:339
+#: .\templates\index.html:338
 msgid "клиенты говорят"
-msgstr ""
+msgstr "clients say"
 
-#: .\templates\index.html:354 .\templates\index.html:390
+#: .\templates\index.html:353 .\templates\index.html:389
 msgid "September"
 msgstr ""
 
-#: .\templates\index.html:372
+#: .\templates\index.html:371
 msgid "October"
 msgstr ""
 
-#: .\templates\index.html:409
+#: .\templates\index.html:408
 msgid "Запишитесь на тест-драйв"
-msgstr ""
+msgstr "Sign up for a test drive"
 
-#: .\templates\index.html:412
+#: .\templates\index.html:411
 msgid "Позвонить"
-msgstr ""
+msgstr "To call"
 
-#: .\templates\index.html:415
+#: .\templates\index.html:414
 msgid ""
 "Выберите автомобиль, который наилучшим образом соответствует вашим "
 "потребностям."
-msgstr ""
+msgstr "Choose the car that best suits your needs needs."
 
-#: .\templates\index.html:419
+#: .\templates\index.html:418
 msgid "Записаться"
-msgstr ""
+msgstr "Sign up"
 
-#: .\templates\index.html:422
+#: .\templates\index.html:421
 msgid "GET QUOTE"
-msgstr ""
+msgstr "ПОЛУЧИТЬ ЦИТАТУ"
 
-#: .\templates\index.html:438
+#: .\templates\index.html:437
 msgid "Ул. Университетская 33"
-msgstr ""
+msgstr "33 Universitetskaya Street"
 
-#: .\templates\index.html:456
+#: .\templates\index.html:455
 msgid "Понедельник-Пятница"
-msgstr ""
+msgstr "Monday-Friday"
+
+#~ msgid "Сентябрь"
+#~ msgstr "September"
+
+#~ msgid "Октябрь"
+#~ msgstr "October"

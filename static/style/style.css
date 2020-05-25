@@ -2,7 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 a {
@@ -124,7 +124,21 @@ header{
 	font-size: 18px;
 }
 
+@media (max-width: 1199px){
+    .header_second_label{
+        display: none;
+    }
 
+    .inner_header_icons{
+        padding: 0;
+    }
+}
+
+@media (max-width: 991px){
+    .inner_header_icons{
+        display: none;
+    }
+}
 
 /* slider */
 
@@ -333,7 +347,7 @@ header{
 
 .our_stats{
 	width: 100%;
-	height: 400px;
+
 	background-color: #1b242b;
 }
 
@@ -362,7 +376,8 @@ header{
 
 .our_stats_info{
 	display: flex;
-	margin-top: 20px;
+	margin: 20px 0 20px 0;
+
 }
 
 .our_stats_number{
@@ -584,6 +599,13 @@ ul {
 .our_latest_specials a:hover {
     color: #1b242b;
 }
+
+@media(max-width: 767px){
+    .our_latest_specials img {
+        width: 74%;
+    }
+}
+
 
 /* our certified */
 
@@ -907,15 +929,15 @@ hr {
 .item{
 	width: 100%;
 	height: 400px;
-	margin: 20px 0 20px 0;
+	margin: 40px 0 20px 0;
 	background-color: #f6f6f6;
 	display: flex;
-	font-family: 'PTSans', sans-serif;
+
 	transition: box-shadow 0.3s linear;
 }
 
 .item:hover{
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 5px 11px rgba(0,0,0,0.14);
 }
 
 .outer-item-picture{
@@ -934,6 +956,41 @@ hr {
     top: 0;
     bottom: 0;
     right: 0;
+}
+
+.mini-description{
+    height: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 24px;
+
+}
+
+@media (max-width: 767px){
+    .mini-description{
+        display: none;
+    }
+
+    .icons{
+        height: 50%;
+    }
+
+    .icons li{
+        margin-top: 20px;
+    }
+
+    .itemButton{
+
+        padding: 10px 20px 10px 20px;
+    }
+
+    .item img{
+        width: 200px;
+    }
 }
 
 .rating-area {
@@ -1016,11 +1073,21 @@ hr {
 .item h5{
 	margin: 40px 0 0 0;
 	color: #1b242b;
+
+	font-weight: 500;
+    letter-spacing: 0.025em;
+    margin-bottom: 22px;
+    width: 50%;
 }
 
 .item h6{
 	color: #666666;
 	margin: 20px 0 0 0;
+
+
+	font-weight: 500;
+    letter-spacing: 0.025em;
+    width: 50%;
 }
 
 .item p{
@@ -1156,6 +1223,14 @@ hr {
     z-index: 1;
     margin-top: -3px;
 }
+
+@media (max-width: 991px){
+    .sort-outer{
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+}
+
 /* end search */
 
 /* END SHOP PAGE */
@@ -1666,10 +1741,34 @@ a {
 }
 
 
+.rating-shop{
+    margin-top: 15px;
+}
+
+.rating-shop div{
+    margin: auto;
+    display: flex;
+}
+
+.rating-shop label{
+    margin: auto;
+    width: 22px;
+}
+
+.rating-shop label:before{
+    font-size: 18px;
+}
+
+.rating-shop label:after{
+    font-size: 18px;
+}
+
+
 /* pop-language */
 
 .pop-language{
     display: flex;
+    z-index: 5;
     position: fixed;
     width: 250px;
     height: 50px;
@@ -1679,7 +1778,6 @@ a {
     opacity: 0.7;
 
     transition: right 0.3s ease-in-out;
-
 }
 
 .pop-language:hover{
@@ -1748,4 +1846,11 @@ a {
     right: 1rem;
     z-index: 1;
     margin-top: -3px;
+}
+
+
+/* car models */
+
+.car-card{
+    bottom: 0;
 }

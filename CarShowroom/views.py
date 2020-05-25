@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
 from .forms import ReviewsForm, TestDriveForm
-from .models import Product
+from .models import Product, Car
 
 
 class MainView(View):
@@ -121,3 +121,8 @@ class RecordTestDrive(View):
 class ThxRecordTestDrive(View):
     def get(self, request):
         return render(request, 'ThxRecordTestDrive.html', context=None)
+
+
+class ModelsView(ListView):
+    model = Car
+    template_name = 'cars.html'

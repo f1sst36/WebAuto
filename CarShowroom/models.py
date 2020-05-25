@@ -75,3 +75,7 @@ class TestDrive(models.Model):
     class Meta:
         verbose_name = "Запись на тест драйв"
         verbose_name_plural = "Записи на тест драйв"
+
+
+class Car(models.Model):
+    pass

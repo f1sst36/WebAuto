@@ -131,6 +131,7 @@ STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR]
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -140,3 +141,6 @@ EMAIL_HOST_USER = 'audistoreshowroom@gmail.com'
 EMAIL_HOST_PASSWORD = 'audistoreshowroom46'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+TRANSLATABLE_MODEL_MODULES = ["CarShowroom.models", ]

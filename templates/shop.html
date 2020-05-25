@@ -42,22 +42,19 @@
                     <div class="outer-item-picture">
                         <img class="itemPicture" src="{{ product.picture.url }}" alt="">
                     </div>
-                    <div class="rating-area">
-                        <input type="radio" id="star-5" name="rating" value="5">
-                        <label for="star-5" title="Оценка «5»" {% if product.rating >= 5 %}style="color: #c62f2d;
-	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
-                        <input type="radio" id="star-4" name="rating" value="4" >
-                        <label for="star-4" title="Оценка «4»" {% if product.rating >= 4 %}style="color: #c62f2d;
-	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
-                        <input type="radio" id="star-3" name="rating" value="3">
-                        <label for="star-3" title="Оценка «3»" {% if product.rating >= 3 %}style="color: #c62f2d;
-	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
-                        <input type="radio" id="star-2" name="rating" value="2">
-                        <label for="star-2" title="Оценка «2»" {% if product.rating >= 2 %}style="color: #c62f2d;
-	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
-                        <input type="radio" id="star-1" name="rating" value="1">
-                        <label for="star-1" title="Оценка «1»" {% if product.rating >= 1 %}style="color: #c62f2d;
-	text-shadow: 1px 1px #c62f2d;"{% endif %}></label>
+                    <div class="rating rating-review rating-shop">
+                        <div>
+                            <input type="radio" {% if product.rating == 5 %}checked{% endif %} disabled ><label for="">
+                            </label>
+                            <input type="radio" {% if product.rating == 4 %}checked{% endif %} disabled ><label for="">
+                            </label>
+                            <input type="radio" {% if product.rating == 3 %}checked{% endif %} disabled ><label for="">
+                            </label>
+                            <input type="radio" {% if product.rating == 2 %}checked{% endif %} disabled ><label for="">
+                            </label>
+                            <input type="radio" {% if product.rating == 1 %}checked{% endif %} disabled ><label for="">
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -76,7 +73,7 @@
                         </li>
                     </ul>
                     <hr>
-                    <p>
+                    <p class="mini-description">
                         {{ product.description }}
                     </p>
                 </div>

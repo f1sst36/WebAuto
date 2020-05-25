@@ -10,4 +10,5 @@ urlpatterns = [
     path("review/<slug:slug>", views.AddReview.as_view(), name='add_review'),
     path("test-drive", views.TestDriveView.as_view(), name='test_drive'),
     path("record-on-test-drive", views.RecordTestDrive.as_view(), name='record_on_test_drive'),
+    path("record-on-test-drive/success", views.ThxRecordTestDrive.as_view(), name='thx_record_on_test_drive')
 ]

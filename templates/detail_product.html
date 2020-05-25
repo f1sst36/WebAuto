@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div>
-                    <button class="info_btn active_btn" id="btn_more">Подробнее</button>
+                    <button class="info_btn" id="btn_more">Подробнее</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -56,12 +56,12 @@
             </div>
             <div class="col-lg-4 col-md-4">
                 <div>
-                    <button class="info_btn" id="reviews">Отзывы</button>
+                    <button class="info_btn active_btn" id="reviews">Отзывы</button>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="product_info_content prod_more_inf prod_tabs_active">
+            <div class="product_info_content prod_more_inf">
                 <p class="text">
                     Рекомендованные параметры колесного диска могут немного отличаться для одной и той же машины,
                     независимо от того, какой диск вы хотите установить на ваш автомобиль — стальной, литой или кованый.
@@ -100,7 +100,7 @@
                     </tbody>
                   </table>
             </div>
-            <div class="product_info_content prod_review">
+            <div class="product_info_content prod_review prod_tabs_active">
                 {% if not product.reviews_set.all %}
                     <div class="row user_reviews">
                         <div class="row">
@@ -114,6 +114,20 @@
                     <div class="row user_reviews">
                         <div class="row">
                             <h5>{{ review.name }}</h5>
+                        </div>
+                        <div class="row">
+                            <div class="rating rating-review">
+                                <input type="radio" {% if review.rating == 5 %}checked{% endif %} disabled ><label for="">
+                                </label>
+                                <input type="radio" {% if review.rating == 4 %}checked{% endif %} disabled ><label for="">
+                                </label>
+                                <input type="radio" {% if review.rating == 3 %}checked{% endif %} disabled ><label for="">
+                                </label>
+                                <input type="radio" {% if review.rating == 2 %}checked{% endif %} disabled ><label for="">
+                                </label>
+                                <input type="radio" {% if review.rating == 1 %}checked{% endif %} disabled ><label for="">
+                                </label>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="review_box">
@@ -131,15 +145,15 @@
                     <div class="form-group">
                         <label for="" style="margin: 0;"><strong>Оцените товар</strong></label>
                         <div class="rating">
-                            <input type="radio" name="star" id="star1"><label for="star1">
+                            <input value="5" type="radio" name="rating" id="star1"><label for="star1">
                             </label>
-                            <input type="radio" name="star" id="star2"><label for="star2">
+                            <input value="4" type="radio" name="rating" id="star2"><label for="star2">
                             </label>
-                            <input type="radio" name="star" id="star3"><label for="star3">
+                            <input value="3" type="radio" name="rating" id="star3"><label for="star3">
                             </label>
-                            <input type="radio" name="star" id="star4"><label for="star4">
+                            <input value="2" type="radio" name="rating" id="star4"><label for="star4">
                             </label>
-                            <input type="radio" name="star" id="star5"><label for="star5">
+                            <input value="1" type="radio" name="rating" id="star5"><label for="star5">
                             </label>
                         </div>
                     </div>

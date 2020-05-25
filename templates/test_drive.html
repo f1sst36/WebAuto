@@ -17,13 +17,13 @@
 <section class="testdrive_form">
     <div class="container">
         <div class="testdrive_content">
-            <form action="{% url 'record_on_test_drive' %}" method="post">
+            <form onsubmit="return SubmitForm()" action="{% url 'record_on_test_drive' %}" method="post">
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
                         <div class="select_model">
-                            <select name="car_model" class="form-control">
-                                <option>Выберите модель авто*</option>
+                            <select name="car_model" class="form-control" id="selectAuto">
+                                <option value="None">Выберите модель авто*</option>
                                 <option value="AUDI A3 Sportback">AUDI A3 Sportback</option>
                                 <option value="AUDI Q7 TDI">AUDI Q7 TDI</option>
                                 <option value="AUDI SQ8">AUDI SQ8</option>
@@ -32,8 +32,8 @@
                             </select>
                         </div>
                         <div class="select_model">
-                            <select name="time" class="form-control">
-                                <option>Выберите время*</option>
+                            <select name="time" class="form-control" id="selectTime">
+                                <option value="None">Выберите время*</option>
                                 <option value="9:00">9:00</option>
                                 <option value="10:00">10:00</option>
                                 <option value="11:00">11:00</option>
@@ -43,26 +43,26 @@
                             </select>
                         </div>
                         <div class="input_div" style="color: #999;">
-                            <input name="date" type="date" class="input">
+                            <input name="date" type="date" class="input" required>
                         </div>
                         <p class="text">* Обязательное поле</p>
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="input_div one">
-                            <h5>Имя*</h5>
-                            <input name="name" type="text" class="input">
+                            <h5></h5>
+                            <input placeholder="Имя*" name="name" type="text" class="input" required>
                         </div>
                         <div class="input_div two">
-                            <h5>Фамилия*</h5>
-                            <input name="surname" type="text" class="input">
+                            <h5></h5>
+                            <input placeholder="Фамилия*" name="surname" type="text" class="input" required>
                         </div>
                         <div class="input_div three">
-                            <h5>Email</h5>
-                            <input name="mail" type="text" class="input">
+                            <h5></h5>
+                            <input placeholder="Email*" name="mail" type="email" class="input" required>
                         </div>
                         <div class="input_div four">
-                            <h5>Телефон*</h5>
-                            <input name="phone" type="text" class="input">
+                            <h5></h5>
+                            <input placeholder="Телефон*" name="phone" type="text" class="input" required>
                         </div>
                     </div>
                 </div>
@@ -74,5 +74,6 @@
     </div>
 </section>
 
-<script src="{% static 'js/testDrive.js' %}"></script>
+<script src="{% static 'js/test_drive_validation.js' %}"></script>
+<!--<script src="{% static 'js/testDrive.js' %}"></script>-->
 {% endblock content%}

@@ -15,7 +15,7 @@ class ProductAdmin(TranslationAdmin):
 
 @admin.register(Reviews)
 class ReviewsAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'product', 'date', 'text', 'rating')
 
 @admin.register(TestDrive)
 class TestDriveAdmin(admin.ModelAdmin):

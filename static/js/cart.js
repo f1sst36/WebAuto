@@ -52,7 +52,7 @@ function OpenCart(){
 
 	if(cartItemsNode.innerHTML == ''){
         template = `
-            <div>В корзине пусто</div>
+            <h4>В корзине пусто</h4>
         `
         cartItemsNode.insertAdjacentHTML('beforeend', template)
     }

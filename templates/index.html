@@ -316,22 +316,22 @@
     <div class="row">
         <div class="col-lg-3 col-md-6">
             <div class="photos_box">
-                <img src="{% static 'img/carrepair-img-7.jpg' %}" alt="11">
+                <img src="{% static 'img/car_1.jpg' %}" alt="11">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
             <div class="photos_box">
-                <img src="{% static 'img/carrepair-img-8.jpg' %}" alt="12">
+                <img src="{% static 'img/car_2.jpg' %}" alt="12">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
             <div class="photos_box">
-                <img src="{% static 'img/carrepair-img-9.jpg' %}" alt="13">
+                <img src="{% static 'img/car_3.jpg' %}" alt="13">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
             <div class="photos_box">
-                <img src="{% static 'img/carrepair-img-10.jpg' %}" alt="14">
+                <img src="{% static 'img/car_4.jpg' %}" alt="14">
             </div>
         </div>
     </div>
@@ -423,7 +423,7 @@
                     </div>
                     <div class="row">
                         <div class="col" style="padding: 0;">
-                            <button class="slider_button btn" style="margin-top: 0px;">{% trans 'Записаться' %}</button>
+                            <a href="{% url 'test_drive' %}"><button class="slider_button btn" style="margin-top: 0px;">{% trans 'Записаться' %}</button></a>
                         </div>
                         <!--<div class="col" style="padding: 0;">
                             <button class="slider_button black_button btn">{% trans 'GET QUOTE' %}</button>

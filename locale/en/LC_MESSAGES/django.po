@@ -104,7 +104,7 @@ msgstr "You can get acquainted with"
 
 #: .\templates\index.html:144
 msgid "С услугами которые мы предлагаем:"
-msgstr "With the services we offer:"
+msgstr "the services we offer:"
 
 #: .\templates\index.html:147
 msgid ""

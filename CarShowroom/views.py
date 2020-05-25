@@ -69,9 +69,12 @@ class AddReview(View):
     def post(self, request, slug):
         form = ReviewsForm(request.POST)
         prod = Product.objects.get(slug=slug)
+        rating = request.POST.get("rating")
         if form.is_valid():
             form = form.save(commit=False)
             form.product = prod
+            if rating is not None:
+                form.rating = rating
             form.date = datetime.datetime.now()
             form.save()
         return redirect(prod.get_absolute_url())
@@ -95,4 +98,10 @@ class RecordTestDrive(View):
                                                          f"\nПросим явится вас в наш автосалон {form.date.day} числа ({form.date.month} месяца) в {form.time}."
                                                          f"\nТак же, в ближайщее время с вами свяжется наш сотрудник чтобы обсудить детали.",
                       'audistoreshowroom@gmail.com', [form.mail], fail_silently=False)
+            return redirect('thx_record_on_test_drive')
         return redirect('main_page')
+
+
+class ThxRecordTestDrive(View):
+    def get(self, request):
+        return render(request, 'ThxRecordTestDrive.html', context=None)

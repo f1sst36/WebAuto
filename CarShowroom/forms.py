@@ -7,7 +7,7 @@ from .models import Reviews, TestDrive
 class ReviewsForm(ModelForm):
     class Meta:
         model = Reviews
-        fields = ('name', 'mail', 'text')
+        fields = ('name', 'mail', 'text',)
 
 
 class TestDriveForm(ModelForm):

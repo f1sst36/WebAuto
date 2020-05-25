@@ -5,9 +5,9 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-1">
                     <div class="header_label">
-                        <h2>AUDI</h2>
+                        <a href="{% url 'main_page' %}"><h2>AUDI</h2></a>
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -15,7 +15,7 @@
                         <p>{% trans 'Автосалон' %}</p>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <ul class="header_menu">
                         <li><a href="{% url 'main_page' %}">{% trans 'ГЛАВНАЯ' %}</a></li>
                         <li><a href="#">{% trans 'УСЛУГИ' %}</a></li>

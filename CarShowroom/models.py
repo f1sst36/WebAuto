@@ -47,6 +47,7 @@ class Reviews(models.Model):
     name = models.CharField('Имя', max_length=200)
     mail = models.EmailField('Почта')
     date = models.DateTimeField('Дата публикации', null=True)
+    rating = models.PositiveSmallIntegerField('Рейтинг отзыва', default=3)
     product = models.ForeignKey(Product, verbose_name='Товар', on_delete=models.CASCADE, null=True)
 
     def __str__(self):

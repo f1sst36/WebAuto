@@ -1072,6 +1072,10 @@ hr {
 	font-family: 'PTSans', sans-serif;
 }
 
+.filter .col-lg-6{
+    padding: 0;
+}
+
 .search{
 	display: flex;
 }
@@ -1099,8 +1103,28 @@ hr {
 	background-color: #1b242b;
 }
 
+.sort-outer{
+    display: flex;
+    padding-left: 20px;
+}
+
+.sort-outer button{
+    border: none;
+	background-color: #c62f2d;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px 35px 10px 35px;
+	outline: none;
+	transition: background-color 0.2s linear;
+}
+
+.sort-outer button:hover{
+	background-color: #1b242b;
+}
+
 .sort{
     position: relative;
+    width: 80%;
 }
 
 .sort select{

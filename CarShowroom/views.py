@@ -29,7 +29,7 @@ class ShopView(ListView):
     '''Страница магазина деталей'''
 
     model = Product
-    queryset = Product.objects.all()
+    queryset = Product.objects.order_by("-rating")
     template_name = "shop.html"
 
     paginate_by = 3
@@ -47,8 +47,24 @@ class SearchProductView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['q'] = f'q={self.request.GET.get("q")}&'
+        context['q'] = f'search_query={self.request.GET.get("search_query")}&'
         context['search_query'] = self.request.GET.get("search_query")
+        return context
+
+
+class SortProductView(ListView):
+    #Сортировка продутов
+
+    model = Product
+    template_name = "shop.html"
+    paginate_by = 3
+
+    def get_queryset(self):
+        return Product.objects.order_by(self.request.GET.get("criterion"))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['c'] = f'criterion={self.request.GET.get("criterion")}&'
         return context
 
 

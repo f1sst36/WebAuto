@@ -6,25 +6,28 @@
 {% block content %}
 <section>
     <div class="container">
-        <div class="row">
-            <div class="filter">
-                <div class="col-lg-6">
-                    <form action="{% url 'shop_search' %}" method="get">
-                        <div class="search">
-                            <input type="text" name="search_query" placeholder="Введите свой запрос" required>
-                            <button type="submit">Поиск</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="sort">
-                        <select name="" id="">
-                            <option value="">По возвростанию цены</option>
-                            <option value="">По убыванию цены</option>
-                            <option value="">Самые популярные</option>
-                        </select>
+        <div class="row filter">
+            <div class="col-lg-6">
+                <form action="{% url 'shop_search' %}" method="get">
+                    <div class="search">
+                        <input type="text" name="search_query" placeholder="Введите свой запрос" required>
+                        <button type="submit">Поиск</button>
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <form action="{% url 'shop_sort' %}" method="get">
+                    <div class="sort-outer">
+                        <div class="sort">
+                            <select name="criterion" id="">
+                                <option value="-rating">Самые популярные</option>
+                                <option value="price">По возвростанию цены</option>
+                                <option value="-price">По убыванию цены</option>
+                            </select>
+                        </div>
+                        <button type="submit">Сортировать</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

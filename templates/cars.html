@@ -3,7 +3,7 @@
 
 {% block content %}
 <section>
-    <div class="container-fluid" style="padding: 0;">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="car-top-info">
@@ -19,101 +19,108 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid" style="padding: 0;">
         <div class="row">
             <div class="col-lg-12" style="padding: 0;">
-                <div class="car-models-filter">
-                    <ul>
-                        <li>A3</li>
-                        <li>A4</li>
-                        <li>A5</li>
-                        <li>A6</li>
-                        <li>A7</li>
-                        <li>A8</li>
-                        <li>Q3</li>
-                        <li>Q5</li>
-                        <li>Q7</li>
-                        <li>Q8</li>
-                        <li>Все модели</li>
-                        <li>Пройти тест-драйв</li>
-                    </ul>
-                </div>
+                <form action="{% url 'json_filter_cars' %}" method="get" name="filter">
+                    <div class="car-models-filter">
+                        <ul>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="A4" type="checkbox">
+                                    <span>A4</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="A5" type="checkbox">
+                                    <span>A5</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="A6" type="checkbox">
+                                    <span>A6</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="A7" type="checkbox">
+                                    <span>A7</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="A8" type="checkbox">
+                                    <span>A8</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="Q3" type="checkbox">
+                                    <span>Q3</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="Q5" type="checkbox">
+                                    <span>Q5</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="Q7" type="checkbox">
+                                    <span>Q7</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="Q8" type="checkbox">
+                                    <span>Q8</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="S" type="checkbox">
+                                    <span>S</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-label">
+                                    <input name="model" value="RS" type="checkbox">
+                                    <span>RS</span>
+                                </label>
+                            </li>
+
+                            <li><button type="submit">Фильтровать</button></li>
+                        </ul>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <div class="car-cards-container">
-        <div class="car-card">
-            <div class="car-card-inner">
+        {% for car in car_list %}
+            <div class="car-card">
                 <div class="car-img-outer">
-                    <img class="car-img" src="https://avatars.mds.yandex.net/get-pdb/904462/b198eaa8-1975-4554-a54b-3acadf0ba357/s1200?webp=false" alt="">
+                    <img class="car-img" src="{{ car.poster.url }}" alt="">
+                    <div class="img-tile"></div>
                 </div>
-                <div class="car-mini-info">
-                    <div class="hidden-info-car-1">
-                        <div class="car-card-text">
-                            <h5>AUDI</h5>
-                            <h6>Q7</h6>
-                        </div>
-                    </div>
-                    <div class="hidden-info-car-2">
-                        <h5>AUDI</h5>
-                        <h6>Q7</h6>
-                        <p>
-                            We’ll perform the car checkup and find issues with cooling system, engine, steering and suspension for you! You don’t have to be an expert to do car maintenance!
-                        </p>
-                        <a href="#"><h4>LEARN MORE</h4></a>
-                    </div>
-                    <div style="clear: both;"></div>
+                <div class="car-title">
+                    <h3>AUDI {{ car.model }} {{ car.line }}</h3>
+                    <h5>от {{ car.price }} руб. вкл. НДС</h5>
+                </div>
+                <div class="car-button">
+                    <a href="{{ car.get_absolute_url }}"><i class="fa fa-angle-right" aria-hidden="true"></i> Обзор</a>
                 </div>
             </div>
-        </div>
-        <div class="car-card">
-            <div class="car-card-inner">
-                <div class="car-img-outer">
-                    <img class="car-img" src="https://avatars.mds.yandex.net/get-pdb/904462/b198eaa8-1975-4554-a54b-3acadf0ba357/s1200?webp=false" alt="">
-                </div>
-                <div class="car-mini-info">
-                    <div class="hidden-info-car-1">
-                        <div class="car-card-text">
-                            <h5>AUDI</h5>
-                            <h6>Q7</h6>
-                        </div>
-                    </div>
-                    <div class="hidden-info-car-2">
-                        <h5>AUDI</h5>
-                        <h6>Q7</h6>
-                        <p>
-                            We’ll perform the car checkup and find issues with cooling system, engine, steering and suspension for you! You don’t have to be an expert to do car maintenance!
-                        </p>
-                        <a href="#"><h4>LEARN MORE</h4></a>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="car-card">
-            <div class="car-card-inner">
-                <div class="car-img-outer">
-                    <img class="car-img" src="https://avatars.mds.yandex.net/get-pdb/904462/b198eaa8-1975-4554-a54b-3acadf0ba357/s1200?webp=false" alt="">
-                </div>
-                <div class="car-mini-info">
-                    <div class="hidden-info-car-1">
-                        <div class="car-card-text">
-                            <h5>AUDI</h5>
-                            <h6>Q7</h6>
-                        </div>
-                    </div>
-                    <div class="hidden-info-car-2">
-                        <h5>AUDI</h5>
-                        <h6>Q7</h6>
-                        <p>
-                            We’ll perform the car checkup and find issues with cooling system, engine, steering and suspension for you! You don’t have to be an expert to do car maintenance!
-                        </p>
-                        <a href="#"><h4>LEARN MORE</h4></a>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
+
+<script src="{% static 'js/cars_filter.js' %}"></script>
 
 {% endblock content %}

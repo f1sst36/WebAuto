@@ -28,7 +28,7 @@ header{
 .header{
     width: 100%;
     height: 110px;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     border-bottom: 1px solid rgba(255, 255, 255, 0.450);
     position: absolute;
     z-index: 1;
@@ -155,6 +155,7 @@ header{
 	width: 100%;
 	height: 830px;
 	z-index: -2;
+	object-fit: cover;
 }
 
 .slider_text{
@@ -420,7 +421,7 @@ ul {
     padding: 0;
     list-style-type: none;
     font-size: 14px;
-    font-family: "Open Sans", Sans-serif;
+    /*font-family: "Open Sans", Sans-serif;*/
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.5em;
@@ -441,7 +442,7 @@ ul {
 */
 .gray_title {
     color: #b7b9be;
-    font-family: "Raleway", Sans-serif;
+    /*font-family: "Raleway", Sans-serif;*/
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -451,13 +452,13 @@ ul {
 
 .wide_title {
     color: #1b242b;
-    font-family: "Raleway", Sans-serif;
+    /*font-family: "Raleway", Sans-serif;*/
     font-size: 38px;
     text-transform: uppercase;
 }
 
 .many_auto {
-    font-family: "Raleway", Sans-serif;
+    /*font-family: "Raleway", Sans-serif;*/
     font-size: 38px;
     font-weight: 800;
     text-transform: uppercase;
@@ -468,7 +469,7 @@ ul {
 
 .text {
     color: #8d98a1;
-    font-family: "Open Sans", Sans-serif;
+    /*font-family: "Open Sans", Sans-serif;*/
     font-size: 14px;
     line-height: 1.5em;
     font-weight: 400;
@@ -481,7 +482,7 @@ ul {
 	background-color: #c62f2d;
 	color: #fff;
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
+    /*font-family: "Raleway", Sans-serif;*/
 	font-size: 14px;
 	padding: 15px 45px 17px 45px;
     margin-bottom: 3%;
@@ -508,7 +509,7 @@ ul {
 }
 
 .how_it_works h3 {
-    font-family: "Raleway", Sans-serif;
+    /*font-family: "Raleway", Sans-serif;*/
     text-transform: uppercase;
     font-size: 24px;
 
@@ -587,7 +588,6 @@ ul {
 
 .our_latest_specials a {
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
@@ -651,7 +651,6 @@ ul {
 }
 
 .our_certified_block_content h3 {
-    font-family: "Raleway", Sans-serif;
     text-transform: uppercase;
     font-size: 24px;
 }
@@ -794,7 +793,6 @@ ul {
 }
 
 .contacts h6 {
-    font-family: "Raleway", Sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 16px;
@@ -816,13 +814,11 @@ footer {
 }
 
 .footer_label1 {
-    font-family: "Raleway", Sans-serif;
     color: white;
     text-transform: uppercase;
 }
 
 .footer_label2 {
-    font-family: "Raleway", Sans-serif;
     color: #8d8d8d;
     margin-top: 7%;
 }
@@ -1506,7 +1502,6 @@ a {
 	background-color: #c62f2d;
 	color: #fff;
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
 	font-size: 16px;
 	padding: 15px 45px 17px 45px;
     margin-bottom: 3%;
@@ -1575,7 +1570,6 @@ a {
 	background-color: #c62f2d;
 	color: #fff;
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
 	font-size: 16px;
 	outline: none;
 	z-index: 1;
@@ -1610,7 +1604,6 @@ a {
 	background-color: #1b242b;
 	color: #fff;
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
 	font-size: 16px;
 	outline: none;
 	z-index: 1;
@@ -1651,7 +1644,6 @@ a {
 	background-color: #c62f2d;
 	color: #fff;
     font-weight: 900;
-    font-family: "Raleway", Sans-serif;
 	font-size: 16px;
 	outline: none;
 	z-index: 1;
@@ -1889,6 +1881,40 @@ a {
     color: #fff;
 }
 
+.car-models-filter ul li a:hover{
+    color: #fff;
+}
+
+.car-models-filter ul li button{
+    position: absolute;
+    top: 0;
+    border: none;
+    height: 100%;
+    background-color: #c62f2d;
+    color: #fff;
+    padding: 0 20px 0 20px;
+    outline: none;
+
+    transition: 0.2s background-color ease;
+}
+
+.car-models-filter ul li button:hover{
+    background-color: #a62f2d;
+}
+
+.checkbox-label{
+    cursor: pointer;
+    margin: 0;
+}
+
+.checkbox-label input[type=checkbox]{
+    display: none;
+}
+
+.checkbox-label input[type=checkbox]:checked + span{
+    color: #fff;
+}
+
 .car-cards-container{
     display: flex;
     flex-wrap: wrap;
@@ -1897,56 +1923,49 @@ a {
 }
 
 .car-card{
-	width: 33.3%;
-    position: relative;
+	width: 33.333%;
+	overflow:hidden;
 
     transform: translate3d(0,0,0);
 }
 
-.car-card-inner{
-	width: 100%;
-	overflow:hidden;
-
-	transition: transform 0.5s ease-in-out,
-	            background-color 0.25s cubic-bezier(1, 0, 1, 0);
-}
-
-.car-card:hover > .car-card-inner{
-    transform: rotate3d(0, 1, 0, 180deg);
-    background-color: #1b242b;
-}
-
-.car-card > .car-card-inner > .hidden-info-car-1{
-
-
-    transition: opacity 0.25s cubic-bezier(1, 0, 1, 0);
-}
-
-.car-card:hover > .car-card-inner > .hidden-info-car-1{
-    opacity: 0;
-}
-
-.car-card-inner > .hidden-info-car-2{
-
-    transform: rotate3d(0, 1, 0, 180deg);
-    padding: 40px 20px 0 20px;
-
-    transition: opacity 0.25s cubic-bezier(1, 0, 1, 0),
-                color 0.25s cubic-bezier(1, 0, 1, 0);
-}
-
-.car-card:hover > .car-card-inner > .hidden-info-car-2{
-    opacity: 1;
+.car-title{
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    left: 30px;
     color: #fff;
-    background-color: #19191a;
 }
 
-.car-mini-info{
-    position: relative;
-    height: 330px;
+.car-button{
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 30px;
 }
 
-.car-card-inner i{
+.car-button a{
+    border: 1px solid #fff;
+    padding: 10px 30px 10px 30px;
+    color: #fff;
+    background: none;
+    font-size: 18px;
+
+    transition: border 0.2s ease, color 0.2s ease;
+}
+
+.car-button a:hover{
+    border: 1px solid #c62f2d;
+    color: #c62f2d;
+}
+
+.car-button i{
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.car-hidden-info{
+    position: absolute;
 
 }
 
@@ -1954,30 +1973,40 @@ a {
 	color: #fff;
 }
 
-.car-card-text h5{
-
-
-}
-
-.car-card-text h6{
-
-
-}
-
 .car-img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1.01);
-    height: 330px;
     width: 100%;
     object-fit: contain;
+}
 
-
+.img-tile{
+    background: linear-gradient(to bottom,rgba(25,31,34,.3),rgba(25,31,34,0));
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
 }
 
 .car-img-outer{
     transition: visibility 0.25s cubic-bezier(1, 0, 1, 0);
+}
+
+.car-img-outer{
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -o-transform: scale(1.01);
+
+    -moz-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+}
+
+.car-img-outer:hover{
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -o-transform: scale(1.08);
 }
 
 .car-card-inner:hover > .car-img-outer{
@@ -1986,4 +2015,370 @@ a {
 
 .car-card-inner:hover > .car-mini-info > .hidden-info-car-1{
     display: none;
+}
+
+@media (max-width: 1200px){
+    .car-card{
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px){
+    .car-card{
+        width: 100%;
+    }
+}
+
+/* navbar */
+
+nav {
+    background-color: #19191a;
+}
+
+.navbar-brand {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nav-item {
+    margin-right: 30px;
+}
+
+.nav-item a {
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    transition: .5s;
+    color:#c62f2d;
+    text-decoration: none;
+}
+
+.text {
+    color: #8d98a1;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.wide_title {
+    color: #1b242b;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.framme {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* carpage */
+
+.car_page_header .main_title {
+    padding: 20px 0 20px 0;
+}
+
+.car_page_header h2 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.car_page_header h4 {
+    position: absolute;
+    color: #c62f2d;
+    top: 550px;
+    left: 40px;
+    z-index: 1;
+}
+
+.car_page_header .car_page_arr {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.car_page_header li {
+    background-color: black;
+}
+
+.about_car .title_cent h3 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about_car .title_cent h4 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* car_equipment */
+
+.car_equipment {
+    background-color: #f6f6f7;
+}
+
+.car_equipment h3 {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.car_equipment div {
+    padding: 0;
+}
+
+.car_equipment .equipment_content img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+}
+
+
+.car_equipment .car-title{
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    left: 30px;
+    color: #fff;
+}
+
+.car_equipment .car-button{
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 30px;
+}
+
+.car_equipment .car-button {
+    border: 1px solid #fff;
+    padding: 10px 30px 10px 30px;
+    color: #fff;
+    background: none;
+    font-size: 18px;
+    text-decoration: none;
+    transition: border 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.car_equipment .car-button:hover{
+    border: 1px solid #c62f2d;
+    color: #c62f2d;
+}
+
+.car_equipment .car-button i{
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.car-hidden-info{
+    position: absolute;
+
+}
+
+.car_body_design {
+    display: none;
+}
+
+.car_comfort {
+    display: none;
+}
+
+.car_dynamics_and_control {
+    display: none;
+}
+
+.car_equipment_active {
+    display: block;
+}
+
+.car_equipment .equipment_active_btn {
+    border: 1px solid #c62f2d;
+    color: #c62f2d;
+}
+
+.car_equipment_box p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* specification */
+
+.specifications h3 {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.specifications .framme {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* car_features */
+
+.car_features h3 {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.feature_items div {
+    padding: 0;
+}
+
+.car_features .feature_content {
+    /*height: 225px;*/
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.car_features h1 {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.car_features p {
+    color: #c62f2d;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* car_gallery */
+
+.car_gallery div {
+    padding: 0;
+}
+
+.car_gallery img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.car_gallery .mini_pic img {
+    height: 240px;
+
+    transition: transform 0.2s ease;
+}
+
+.big_pic, .mini_pic{
+    overflow: hidden;
+}
+
+.car_gallery .big_pic img {
+    height: 475px;
+
+    transition: transform 0.2s ease;
+}
+
+.car_gallery .mini_pic img:hover {
+    transform: scale(1.1);
+}
+
+.car_gallery .big_pic img:hover {
+    transform: scale(1.1);
+}
+
+/* car_page_buttons */
+
+.car_page_buttons {
+    padding-bottom: 80px;
+}
+
+.slider_button{
+    border: none;
+    height: 50px;
+    width: 270px;
+	background-color: #c62f2d;
+	color: #fff;
+    font-weight: 900;
+    /*font-family: "Raleway", Sans-serif;*/
+	font-size: 16px;
+	padding: 15px 45px 17px 45px;
+    margin-bottom: 3%;
+	outline: none;
+	z-index: 1;
+    transition: background-color 0.2s linear;
+    border-radius: 0%;
+}
+
+.slider_button:hover{
+    background-color: #1b242b;
+    color: white;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #19191a;
+}
+
+.footer_framme {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.footer_label1 {
+    /*font-family: "Raleway", Sans-serif;*/
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer_label2 {
+    /*font-family: "Raleway", Sans-serif;*/
+    color: #8d8d8d;
+    margin-top: 7%;
+}
+
+footer hr {
+    width: 100%;
+    background-color: #8d8d8d;
+    margin-bottom: 0;
+}
+
+.footer_icons {
+    height: 30px;
+    float: right;
+    padding-top: 15px;
+}
+
+.footer_icons i {
+	line-height: 30px;
+	margin: 0 10px 0 0;
+	color: #8d8d8d;
+	font-size: 16px;
+	transition: color 0.2s linear;
+}
+
+.footer_icons i:hover {
+	color: #c62f2d;
+	cursor: pointer;
+}
+
+.footer_pad_o {
+    padding: 0;
+}
+
+@media (max-width: 769px) {
+    footer {
+        text-align: center;
+    }
+}
+
+.carousel-item img{
+    object-fit: cover;
+    height: 500px;
 }

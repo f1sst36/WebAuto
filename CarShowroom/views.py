@@ -1,4 +1,6 @@
 import datetime
+
+from django.http import JsonResponse
 from django.views.generic import ListView, DetailView
 from django.core.mail import send_mail
 
@@ -6,7 +8,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
 from .forms import ReviewsForm, TestDriveForm
-from .models import Product, Car
+from .models import Product, Car, CarImages
 
 
 class MainView(View):
@@ -53,7 +55,7 @@ class SearchProductView(ListView):
 
 
 class SortProductView(ListView):
-    #Сортировка продутов
+    # Сортировка продутов
 
     model = Product
     template_name = "shop.html"
@@ -126,3 +128,34 @@ class ThxRecordTestDrive(View):
 class ModelsView(ListView):
     model = Car
     template_name = 'cars.html'
+
+
+class JsonFilterCars(ListView):
+    # Фильтр автомобилей
+
+    template_name = 'cars.html'
+
+    def get_queryset(self):
+        queryset = Car.objects.filter(
+            model__in=self.request.GET.getlist("model")
+        ).distinct().values("model", "line", "price", "poster", "slug")
+        if not queryset:
+            queryset = Car.objects.all().values("model", "line", "price", "poster", "slug")
+        return queryset
+
+    def get(self, request, *args, **kwargs):
+        queryset = list(self.get_queryset())
+        return JsonResponse({"cars": queryset}, safe=False)
+
+
+class CarView(DetailView):
+    # Детальная страница машины
+
+    model = Car
+    template_name = 'detail_car.html'
+    slug_field = 'slug'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['img'] = CarImages.objects.filter(car__slug=context['car'].slug).first()
+        return context

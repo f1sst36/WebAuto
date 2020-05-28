@@ -13,4 +13,6 @@ urlpatterns = [
     path("record-on-test-drive", views.RecordTestDrive.as_view(), name='record_on_test_drive'),
     path("record-on-test-drive/success", views.ThxRecordTestDrive.as_view(), name='thx_record_on_test_drive'),
     path("models", views.ModelsView.as_view(), name='models_page'),
+    path("json-filter", views.JsonFilterCars.as_view(), name='json_filter_cars'),
+    path("car/<slug:slug>", views.CarView.as_view(), name='car_detail_view'),
 ]

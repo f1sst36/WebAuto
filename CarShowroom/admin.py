@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Product, Reviews, TestDrive
+from .models import User, Product, Reviews, TestDrive, Car, CarImages
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -17,10 +17,21 @@ class ProductAdmin(TranslationAdmin):
 class ReviewsAdmin(admin.ModelAdmin):
     list_display = ('name', 'product', 'date', 'text', 'rating')
 
+
 @admin.register(TestDrive)
 class TestDriveAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.site_title = "Автосалон"
+@admin.register(Car)
+class CarAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(CarImages)
+class CarImagesAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.site_title = "Автосалон AUDI"
 admin.site.site_header = "Админ панель автосалона"

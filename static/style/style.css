@@ -2093,10 +2093,11 @@ nav {
 
 .car_page_header h4 {
     position: absolute;
-    color: #c62f2d;
+    color: #fff;
     top: 550px;
     left: 40px;
     z-index: 1;
+    text-shadow: #19191a 0 0 2px;
 }
 
 .car_page_header .car_page_arr {

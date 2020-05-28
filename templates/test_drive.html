@@ -24,11 +24,9 @@
                         <div class="select_model">
                             <select name="car_model" class="form-control" id="selectAuto">
                                 <option value="None">Выберите модель авто*</option>
-                                <option value="AUDI A3 Sportback">AUDI A3 Sportback</option>
-                                <option value="AUDI Q7 TDI">AUDI Q7 TDI</option>
-                                <option value="AUDI SQ8">AUDI SQ8</option>
-                                <option value="AUDI Q3 Sportback">AUDI Q3 Sportback</option>
-                                <option value="AUDI A8 L">AUDI A8 L</option>
+                                {% for car in cars %}
+                                    <option value="AUDI {{ car.model }} {{ car.line }}">AUDI {{ car.model }} {{ car.line }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                         <div class="select_model">

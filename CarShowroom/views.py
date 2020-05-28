@@ -100,7 +100,8 @@ class AddReview(View):
 
 class TestDriveView(View):
     def get(self, request):
-        return render(request, "test_drive.html", context=None)
+        cars = Car.objects.all()
+        return render(request, "test_drive.html", {'cars': cars})
 
 
 class RecordTestDrive(View):

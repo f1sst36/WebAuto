@@ -1,1 +1,1 @@
-web: gunicorn webauto.wsgi --log-file -
+web: gunicorn WebAuto.wsgi --log-file -

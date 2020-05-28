@@ -114,7 +114,7 @@ class RecordTestDrive(View):
             form.save()
             send_mail('AUDI Store запись на тест драйв', f"Здравствуйте, {form.name}."
                                                          f"\nВы были записаны на тест-драйв автомобиля {form.car_model}. "
-                                                         f"\nПросим явится вас в наш автосалон {form.date.day} числа ({form.date.month} месяца) в {form.time}."
+                                                         f"\nПросим явиться вас в наш автосалон {form.date.day} числа ({form.date.month} месяца) в {form.time}."
                                                          f"\nТак же, в ближайщее время с вами свяжется наш сотрудник чтобы обсудить детали.",
                       'audistoreshowroom@gmail.com', [form.mail], fail_silently=False)
             return redirect('thx_record_on_test_drive')

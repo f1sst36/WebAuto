@@ -24,7 +24,7 @@ SECRET_KEY = 'k&4%ho1(%4mai&#*z@i3^307_@@3((*x*fa)t(pwyu%oiv1vzb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['blooming-oasis-51072.herokuapp.com']
+ALLOWED_HOSTS = ['blooming-oasis-51072.herokuapp.com', '127.0.0.1']
 
 # Application definition
 

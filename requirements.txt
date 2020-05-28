@@ -9,6 +9,7 @@ django-ckeditor==5.9.0
 django-js-asset==1.2.2
 django-modeltranslation==0.15
 Pillow==7.1.1
+psycopg2==2.7
 requests==2.21.0
 sh==1.12.14
 six==1.12.0

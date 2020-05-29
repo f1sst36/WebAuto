@@ -41,9 +41,6 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <!--<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>-->
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -55,15 +52,6 @@
             <div class="carousel-item">
                 <img src="{{ img.imageSlider3 }}" class="d-block w-100" alt="...">
             </div>
-            <!--<div class="carousel-item">
-                <img src="img/a7-4.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/a7-5.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/a7-6.jpeg" class="d-block w-100" alt="...">
-            </div>-->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
@@ -290,12 +278,13 @@
                 {% csrf_token %}
                 <div class="select_model">
                     <select name="car_model" class="form-control">
-                        <option>Выберите модель авто*</option>
-                        <option value="Модель">Модель 1</option>
-                        <option value="Модель">Модель 2</option>
-                        <option value="Модель">Модель 3</option>
-                        <option value="Модель">Модель 4</option>
-                        <option value="Модель">Модель 5</option>
+                        {% for single_car in cars%}
+                            {% if single_car.model == car.model and single_car.line == car.line %}
+                                <option value="{{ single_car.model }} {{ single_car.line }}" selected>Audi {{ single_car.model }} {{ single_car.line }}</option>
+                            {% else %}
+                                <option value="{{ single_car.model }} {{ single_car.line }}">Audi {{ single_car.model }} {{ single_car.line }}</option>
+                            {% endif %}
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="input_div one">

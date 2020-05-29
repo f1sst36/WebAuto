@@ -1480,7 +1480,7 @@ a {
 }
 
 .form-control {
-    border: 1px solid #ced4da;
+    border: none;
     font-size: 18px;
     color: #999;
 }
@@ -2512,6 +2512,11 @@ footer hr {
 
 
 /* car_servise_record_form */
+
+
+.car_servise_record_form input, .car_servise_record_form select{
+    border: 1px solid #ced4da;
+}
 
 .car_servise_record_form form {
     width: 70%;

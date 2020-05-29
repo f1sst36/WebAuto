@@ -145,3 +145,23 @@ class PurchaseCar(models.Model):
     class Meta:
         verbose_name = "Запрос к дилеру"
         verbose_name_plural = "Запросы к дилеру"
+
+
+class ServiceCar(models.Model):
+    # Заявка на сервис
+
+    work_type = models.CharField('Модель авто', max_length=200)
+    name = models.CharField('Имя', max_length=200)
+    surname = models.CharField('Фамилия', max_length=200)
+    mail = models.EmailField('Почта')
+    phone = models.CharField('Телефон', max_length=50)
+    time = models.CharField('Время', max_length=50)
+    date = models.DateTimeField('Дата записи')
+    date_send = models.DateTimeField('Дата отправки заявки', default=datetime.datetime.now())
+
+    def __str__(self):
+        return f"{self.work_type} - {self.name} - {self.surname}"
+
+    class Meta:
+        verbose_name = "Заявка на сервис"
+        verbose_name_plural = "Заявки на сервис"

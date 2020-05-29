@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 
-from .models import Reviews, TestDrive, PurchaseCar
+from .models import Reviews, TestDrive, PurchaseCar, ServiceCar
 
 
 class ReviewsForm(ModelForm):
@@ -20,3 +20,9 @@ class PurchaseCarForm(ModelForm):
     class Meta:
         model = PurchaseCar
         fields = ('car_model', 'name', 'surname', 'mail', 'phone')
+
+
+class ServiceForm(ModelForm):
+    class Meta:
+        model = ServiceCar
+        fields = ('work_type', 'name', 'surname', 'mail', 'phone', 'time', 'date')

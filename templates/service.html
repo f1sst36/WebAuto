@@ -66,57 +66,58 @@
 
 <section class="car_servise_record_form">
     <div class="container">
-        <form action="car service record.html">
+        <form action="{% url 'service_record' %}" method="post">
+            {% csrf_token %}
             <div class="form-row">
                 <div class="col-lg-12">
                     <label for="inputTypeOfWork">Вид работ:</label>
-                    <select id="inputTypeOfWork" class="form-control">
-                        <option selected>Кузовные работы</option>
-                        <option>Селесарные работы</option>
-                        <option>Двигатель</option>
-                        <option>Электрика</option>
-                        <option>Шиномонтаж</option>
-                        <option>Компьютерная диагностика</option>
-                        <option>Коробка передач</option>
+                    <select name="work_type" id="inputTypeOfWork" class="form-control">
+                        <option value="Кузовные работы" selected>Кузовные работы</option>
+                        <option value="Селесарные работы">Селесарные работы</option>
+                        <option value="Двигатель">Двигатель</option>
+                        <option value="Электрика">Электрика</option>
+                        <option value="Шиномонтаж">Шиномонтаж</option>
+                        <option value="Компьютерная диагностика">Компьютерная диагностика</option>
+                        <option value="Коробка передач">Коробка передач</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-lg-6">
                     <label for="inputDate">Дата:</label>
-                    <input id="inputDate" class="form-control" type="date" class="input">
+                    <input name="date" id="inputDate" class="form-control" type="date" class="input">
                 </div>
                 <div class="form-group col-lg-6">
                     <label for="inputTime">Время:</label>
-                    <select id="inputTime" class="form-control">
-                        <option selected>9:00</option>
-                        <option>10:00</option>
-                        <option>11:00</option>
-                        <option>12:00</option>
-                        <option>14:00</option>
-                        <option>15:00</option>
-                        <option>16:00</option>
+                    <select name="time" id="inputTime" class="form-control">
+                        <option value="9:00" selected>9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-lg-6">
                     <label for="inputName">Имя:</label>
-                    <input id="inputName" class="form-control" type="text" class="input">
+                    <input name="name" id="inputName" class="form-control" type="text" class="input" required>
                 </div>
                 <div class="form-group col-lg-6">
                     <label for="inputLastName">Фамилия:</label>
-                    <input id="inputName" class="form-control" type="text" class="input">
+                    <input name="surname" id="inputName" class="form-control" type="text" class="input" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input name="mail" type="email" class="form-control" id="inputEmail4" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPhone">Номер телефона:</label>
-                  <input type="text" class="form-control" id="inputPhone">
+                  <input name="phone" type="text" class="form-control" id="inputPhone" required>
                 </div>
               </div>
             <div class="form-row">

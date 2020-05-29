@@ -17,4 +17,5 @@ urlpatterns = [
     path("car/<slug:slug>", views.CarView.as_view(), name='car_detail_view'),
     path("purchase", views.PurchaseCar.as_view(), name='purchase_form'),
     path("service", views.ServiceView.as_view(), name='service_page'),
+    path("service/record", views.ServiceCar.as_view(), name='service_record'),
 ]

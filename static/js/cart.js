@@ -10,6 +10,9 @@ function setCartData(o){
 function OpenCart(){
 	let cartData = getCartData(),
 		cartItemsNode = document.querySelector('#cartItems'),
+		totalPrice = document.querySelector('.total-price-number'),
+		productsPrice = document.querySelector('.products-price'),
+		price = 0,
 		template
 
 	cartItemsNode.innerHTML = ''
@@ -46,8 +49,13 @@ function OpenCart(){
 				</div>
 			`
 
+            price += Number(cartData[item][1].replace('₽', '')) * Number(cartData[item][3])
 			cartItemsNode.insertAdjacentHTML('beforeend', template)
 		}
+
+
+		totalPrice.innerHTML = (price + 400) + '₽'
+        productsPrice.innerHTML = price + '.00₽'
 	}
 
 	if(cartItemsNode.innerHTML == ''){

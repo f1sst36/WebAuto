@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
-from .forms import ReviewsForm, TestDriveForm, PurchaseCarForm
+from .forms import ReviewsForm, TestDriveForm, PurchaseCarForm, ServiceForm
 from .models import Product, Car, CarImages
 
 
@@ -159,6 +159,7 @@ class CarView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['img'] = CarImages.objects.filter(car__slug=context['car'].slug).first()
+        context['cars'] = Car.objects.all()
         return context
 
 
@@ -167,10 +168,8 @@ class PurchaseCar(View):
 
     def post(self, request):
         form = PurchaseCarForm(request.POST)
-        print('no valid for now')
         if form.is_valid():
-            print('valid')
-            form.save(commit=False)
+            form = form.save(commit=False)
             send_mail('AUDI Store запрос дилеру', f"Был отправлен запрос дилеру, побробная инфа в БД.",
                       'audistoreshowroom@gmail.com', ['f1sst36@gmail.com', 'edemmametov2000@gmail.com'],
                       fail_silently=False)
@@ -181,3 +180,17 @@ class PurchaseCar(View):
 class ServiceView(View):
     def get(self, request):
         return render(request, 'service.html', context=None)
+
+
+class ServiceCar(View):
+    # Заявка на сервис
+
+    def post(self, request):
+        form = ServiceForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            send_mail('AUDI Store запись на сервис', f"Здравствуйте, {form.name} {form.surname}.\nВы были записаны на сервис на {form.date.day} число.",
+                      'audistoreshowroom@gmail.com', [form.mail],
+                      fail_silently=False)
+            form.save()
+        return redirect('main_page')

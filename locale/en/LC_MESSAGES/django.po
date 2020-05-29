@@ -568,7 +568,7 @@ msgstr "Start-up and adjustment repairs"
 
 #: .\templates\service.html:44
 msgid "Выравнивание Колес"
-msgstr "The Alignment Of The Wheels"
+msgstr "Wheels Alignment"
 
 #: .\templates\service.html:45
 msgid "Резюме цапф"

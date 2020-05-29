@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Магазин деталей{% endblock title %}
 
@@ -10,8 +11,8 @@
             <div class="col-lg-6">
                 <form action="{% url 'shop_search' %}" method="get">
                     <div class="search">
-                        <input type="text" name="search_query" placeholder="Введите свой запрос" required>
-                        <button type="submit">Поиск</button>
+                        <input type="text" name="search_query" placeholder="{% trans 'Введите свой запрос' %}" required>
+                        <button type="submit">{% trans 'Поиск' %}</button>
                     </div>
                 </form>
             </div>
@@ -20,12 +21,12 @@
                     <div class="sort-outer">
                         <div class="sort">
                             <select name="criterion" id="">
-                                <option value="-rating">Самые популярные</option>
-                                <option value="price">По возвростанию цены</option>
-                                <option value="-price">По убыванию цены</option>
+                                <option value="-rating">{% trans 'Самые популярные' %}</option>
+                                <option value="price">{% trans 'По возвростанию цены' %}</option>
+                                <option value="-price">{% trans 'По убыванию цены' %}</option>
                             </select>
                         </div>
-                        <button type="submit">Сортировать</button>
+                        <button type="submit">{% trans 'Сортировать' %}</button>
                     </div>
                 </form>
             </div>
@@ -33,7 +34,7 @@
     </div>
     <div class="container">
         {% if not product_list %}
-        <div>По вашему запросу "{{ search_query }}" ничего не найдено</div>
+        <div>{% trans 'По вашему запросу' %} "{{ search_query }}" {% trans 'ничего не найдено' %}</div>
         {% endif %}
         {% for product in product_list %}
         <div class="row">
@@ -59,17 +60,17 @@
                 </div>
                 <div class="col-lg-8">
                     <h5><b class="itemTitle">{{ product.name }}</b></h5>
-                    <h6><b>Цена:</b>
+                    <h6><b>{% trans 'Цена' %}:</b>
                         <spin class="itemPrice">{{ product.price }}₽</spin>
                     </h6>
                     <ul class="icons">
                         <!--<li><i class="fa fa-cart-plus cartPlus" aria-hidden="true" data-slug="{{ product.slug }}"></i></li>-->
                         <!--<li><i class="fa fa-info-circle" aria-hidden="true"></i></li>-->
                         <li><a href="{{ product.get_absolute_url }}">
-                            <button class="itemButton">Подробнее</button>
+                            <button class="itemButton">{% trans 'Подробнее' %}</button>
                         </a></li>
                         <li>
-                            <button class="itemButton cartPlus" data-slug="{{ product.slug }}">В корзину</button>
+                            <button class="itemButton cartPlus" data-slug="{{ product.slug }}">{% trans 'В корзину' %}</button>
                         </li>
                     </ul>
                     <hr>

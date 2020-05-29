@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <div class="pagination">
     <div class="col-lg-8">
         <ul class="pagination-ul">
@@ -47,6 +49,6 @@
         </ul>
     </div>
     <div class="col-lg-4">
-        <h6>Просмотрено {{ page_obj.end_index }} из {{ page_obj.paginator.count }} результатов</h6>
+        <h6>{% trans 'Просмотрено' %} {{ page_obj.end_index }} {% trans 'из' %} {{ page_obj.paginator.count }} {% trans 'результатов' %}</h6>
     </div>
 </div>

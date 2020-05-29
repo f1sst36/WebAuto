@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <section class="testdrive_main_title">
     <div class="container">
         <div class="row">
             <div class="row testdrive_main_title_1">
-                <h2 class="wide_title">Запись на тест-драйв</h2>
+                <h2 class="wide_title">{% trans 'Запись на тест-драйв' %}</h2>
             </div>
             <div class="row testdrive_main_title_2">
-                <h6 class="text">Выбираете новый автомобиль? Пройдите тест-драйв на автомобилях, чтобы убедиться в их ходовых характеристиках и эргономике.</h6>
+                <h6 class="text">{% trans 'Выбираете новый автомобиль? Пройдите тест-драйв на автомобилях, чтобы убедиться в их ходовых характеристиках и эргономике.' %}</h6>
             </div>
         </div>
     </div>
@@ -23,7 +24,7 @@
                     <div class="col-lg-6 col-sm-12">
                         <div class="select_model">
                             <select name="car_model" class="form-control" id="selectAuto">
-                                <option value="None">Выберите модель авто*</option>
+                                <option value="None">{% trans 'Выберите модель авто' %}*</option>
                                 {% for car in cars %}
                                     <option value="AUDI {{ car.model }} {{ car.line }}">AUDI {{ car.model }} {{ car.line }}</option>
                                 {% endfor %}
@@ -31,7 +32,7 @@
                         </div>
                         <div class="select_model">
                             <select name="time" class="form-control" id="selectTime">
-                                <option value="None">Выберите время*</option>
+                                <option value="None">{% trans 'Выберите время' %}*</option>
                                 <option value="9:00">9:00</option>
                                 <option value="10:00">10:00</option>
                                 <option value="11:00">11:00</option>
@@ -43,16 +44,16 @@
                         <div class="input_div" style="color: #999;">
                             <input name="date" type="date" class="input" required>
                         </div>
-                        <p class="text">* Обязательное поле</p>
+                        <p class="text">* {% trans 'Обязательное поле' %}</p>
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="input_div one">
                             <h5></h5>
-                            <input placeholder="Имя*" name="name" type="text" class="input" required>
+                            <input placeholder="{% trans 'Имя' %}*" name="name" type="text" class="input" required>
                         </div>
                         <div class="input_div two">
                             <h5></h5>
-                            <input placeholder="Фамилия*" name="surname" type="text" class="input" required>
+                            <input placeholder="{% trans 'Фамилия' %}*" name="surname" type="text" class="input" required>
                         </div>
                         <div class="input_div three">
                             <h5></h5>
@@ -60,12 +61,12 @@
                         </div>
                         <div class="input_div four">
                             <h5></h5>
-                            <input placeholder="Телефон*" name="phone" type="text" class="input" required>
+                            <input placeholder="{% trans 'Телефон' %}*" name="phone" type="text" class="input" required>
                         </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 30px;">
-                    <button type="submit" class="slider_button testdrive_btn">Отправить</button>
+                    <button type="submit" class="slider_button testdrive_btn">{% trans 'Отправить' %}</button>
                 </div>
             </form>
         </div>

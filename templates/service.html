@@ -59,7 +59,7 @@
 <section class="car_servise_record_title">
     <div class="container">
         <div class="row">
-            <h2>Запись на автосервис</h2>
+            <h2>{% trans 'Запись на автосервис' %}</h2>
         </div>
     </div>
 </section>
@@ -70,25 +70,25 @@
             {% csrf_token %}
             <div class="form-row">
                 <div class="col-lg-12">
-                    <label for="inputTypeOfWork">Вид работ:</label>
+                    <label for="inputTypeOfWork">{% trans 'Вид работ' %}:</label>
                     <select name="work_type" id="inputTypeOfWork" class="form-control">
-                        <option value="Кузовные работы" selected>Кузовные работы</option>
-                        <option value="Селесарные работы">Селесарные работы</option>
-                        <option value="Двигатель">Двигатель</option>
-                        <option value="Электрика">Электрика</option>
-                        <option value="Шиномонтаж">Шиномонтаж</option>
-                        <option value="Компьютерная диагностика">Компьютерная диагностика</option>
-                        <option value="Коробка передач">Коробка передач</option>
+                        <option value="Кузовные работы" selected>{% trans 'Кузовные работы' %}</option>
+                        <option value="Селесарные работы">{% trans 'Селесарные работы' %}</option>
+                        <option value="Двигатель">{% trans 'Двигатель' %}</option>
+                        <option value="Электрика">{% trans 'Электрика' %}</option>
+                        <option value="Шиномонтаж">{% trans 'Шиномонтаж' %}</option>
+                        <option value="Компьютерная диагностика">{% trans 'Компьютерная диагностика' %}</option>
+                        <option value="Коробка передач">{% trans 'Коробка передач' %}</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-lg-6">
-                    <label for="inputDate">Дата:</label>
+                    <label for="inputDate">{% trans 'Дата' %}:</label>
                     <input name="date" id="inputDate" class="form-control" type="date" class="input">
                 </div>
                 <div class="form-group col-lg-6">
-                    <label for="inputTime">Время:</label>
+                    <label for="inputTime">{% trans 'Время' %}:</label>
                     <select name="time" id="inputTime" class="form-control">
                         <option value="9:00" selected>9:00</option>
                         <option value="10:00">10:00</option>
@@ -102,11 +102,11 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-lg-6">
-                    <label for="inputName">Имя:</label>
+                    <label for="inputName">{% trans 'Имя' %}:</label>
                     <input name="name" id="inputName" class="form-control" type="text" class="input" required>
                 </div>
                 <div class="form-group col-lg-6">
-                    <label for="inputLastName">Фамилия:</label>
+                    <label for="inputLastName">{% trans 'Фамилия' %}:</label>
                     <input name="surname" id="inputName" class="form-control" type="text" class="input" required>
                 </div>
             </div>
@@ -116,12 +116,12 @@
                   <input name="mail" type="email" class="form-control" id="inputEmail4" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPhone">Номер телефона:</label>
+                  <label for="inputPhone">{% trans 'Номер телефона' %}:</label>
                   <input name="phone" type="text" class="form-control" id="inputPhone" required>
                 </div>
               </div>
             <div class="form-row">
-                <button type="submit" class="slider_button service_record_btn">Отправить</button>
+                <button type="submit" class="slider_button service_record_btn">{% trans 'Отправить' %}</button>
             </div>
         </form>
     </div>

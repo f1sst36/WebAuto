@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block header %}
 <nav class="navbar navbar-expand-md navbar-dark sticky-top">
@@ -11,19 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a href="{% url 'main_page' %}">Главная</a>
+                    <a href="{% url 'main_page' %}">{% trans 'Главная' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'models_page' %}">Модельный ряд</a>
+                    <a href="{% url 'models_page' %}">{% trans 'Модельный ряд' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">О нас</a>
+                    <a href="{% url 'service_page' %}">{% trans 'СЕРВИС' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'shop_page' %}">Магазин</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Прочее</a>
+                    <a href="{% url 'shop_page' %}">{% trans 'Магазин' %}</a>
                 </li>
             </ul>
         </div>
@@ -63,7 +61,7 @@
             <span class="sr-only">Next</span>
         </a>
         </div>
-        <h4>от {{ car.price }} руб. вкл. НДС</h4>
+        <h4>{% trans 'от' %} {{ car.price }} {% trans 'руб. вкл. НДС' %}</h4>
 </section>
 <section class="about_car">
     <div class="container">
@@ -90,10 +88,10 @@
                 <img src="{{ img.imageAbout1 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
-                    <h3>Дизайн кузова</h3>
+                    <h3>{% trans 'Дизайн кузова' %}</h3>
                 </div>
                 <div class="car-button" id="design">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i> Подробнее
+                    <i class="fa fa-angle-right" aria-hidden="true"></i> {% trans 'Подробнее' %}
                 </div>
             </div>
         </div>
@@ -102,10 +100,10 @@
                 <img src="{{ img.imageAbout2 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
-                    <h3>Комфорт</h3>
+                    <h3>{% trans 'Комфорт' %}</h3>
                 </div>
                 <div class="car-button" id="comfort">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i> Подробнее
+                    <i class="fa fa-angle-right" aria-hidden="true"></i> {% trans 'Подробнее' %}
                 </div>
             </div>
         </div>
@@ -114,10 +112,10 @@
                 <img src="{{ img.imageAbout3 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
-                    <h3>Динамика и управляемость</h3>
+                    <h3>{% trans 'Динамика и управляемость' %}</h3>
                 </div>
                 <div class="car-button" id="control">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i> Подробнее
+                    <i class="fa fa-angle-right" aria-hidden="true"></i> {% trans 'Подробнее' %}
                 </div>
             </div>
         </div>
@@ -149,7 +147,7 @@
     <div class="container">
         <div class="row framme">
             <div class="row">
-                <h3>Особенности Audi {{ car.model }} {{ car.line }}</h3>
+                <h3>{% trans 'Особенности' %} Audi {{ car.model }} {{ car.line }}</h3>
             </div>
             <div class="row feature_items">
                 <div class="col-lg-4">
@@ -220,40 +218,40 @@
     <div class="container">
         <div class="row framme">
             <div class="row">
-                <h3 style="text-transform: none; margin-bottom: 20px;">Технические характеристики</h3>
+                <h3 style="text-transform: none; margin-bottom: 20px;">{% trans 'Технические характеристики' %}</h3>
             </div>
             <table class="table">
                 <tbody>
                   <tr>
-                    <th scope="row">Мощность (кВт)/Мощность (л.с.)</th>
+                    <th scope="row">{% trans 'Мощность (кВт)/Мощность (л.с.)' %}</th>
                     <td>{{ car.power }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Тип модели</th>
+                    <th scope="row">{% trans 'Тип модели' %}</th>
                     <td>{{ car.model_type }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Количество мест</th>
+                    <th scope="row">{% trans 'Количество мест' %}</th>
                     <td>{{ car.number_of_packages }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Двигатель</th>
+                    <th scope="row">{% trans 'Двигатель' %}</th>
                     <td>{{ car.engine }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Привод</th>
+                    <th scope="row">{% trans 'Привод' %}</th>
                     <td>{{ car.drive }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Коробка передач</th>
+                    <th scope="row">{% trans 'Коробка передач' %}</th>
                     <td>{{ car.transmission }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Разгон 0-100 км/ч</th>
+                    <th scope="row">{% trans 'Разгон 0-100 км/ч' %}</th>
                     <td>{{ car.acceleration }}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Максимальная скорость</th>
+                    <th scope="row">{% trans 'Максимальная скорость' %}</th>
                     <td>{{ car.max_speed }}</td>
                   </tr>
                 </tbody>
@@ -266,7 +264,7 @@
     <div class="container">
         <div class="row">
             <div class="row purchase_main_title_1">
-                <h2 class="wide_title">Отправить запрос дилеру</h2>
+                <h2 class="wide_title">{% trans 'Отправить запрос дилеру' %}</h2>
             </div>
         </div>
     </div>
@@ -288,11 +286,11 @@
                     </select>
                 </div>
                 <div class="input_div one">
-                    <h5>Имя*</h5>
+                    <h5>{% trans 'Имя' %}*</h5>
                     <input name="name" type="text" class="input" required>
                 </div>
                 <div class="input_div two">
-                    <h5>Фамилия*</h5>
+                    <h5>{% trans 'Фамилия' %}*</h5>
                     <input name="surname" type="text" class="input" required>
                 </div>
                 <div class="input_div three">
@@ -300,11 +298,11 @@
                     <input name="mail" type="email" class="input" required>
                 </div>
                 <div class="input_div four">
-                    <h5>Телефон*</h5>
+                    <h5>{% trans 'Телефон' %}*</h5>
                     <input name="phone" type="text" class="input" required>
                 </div>
                 <div class="row" style="margin-top: 30px;">
-                    <button type="submit" class="slider_button purchase_btn">Отправить</button>
+                    <button type="submit" class="slider_button purchase_btn">{% trans 'Отправить' %}</button>
                 </div>
             </form>
         </div>

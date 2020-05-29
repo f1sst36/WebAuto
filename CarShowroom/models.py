@@ -1,24 +1,9 @@
+import datetime
+
 from django.db import models
 from pyexpat import model
 
 from django.urls import reverse
-
-
-class User(models.Model):
-    # Человек, совершивший заказ
-    name = models.CharField('Имя', max_length=200)
-    surname = models.CharField('Фамилия', max_length=200)
-    middle_name = models.CharField('Отчество', max_length=200)
-    mail = models.EmailField('Почта')
-    phone = models.CharField('Номер телефона', max_length=100)
-    address = models.CharField('Адрес', max_length=200)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = "Пользователь"
-        verbose_name_plural = "Пользователи"
 
 
 class Product(models.Model):
@@ -26,7 +11,7 @@ class Product(models.Model):
     name = models.CharField('Название', max_length=200)
     description = models.TextField('Описание')
     price = models.PositiveIntegerField("Цена")
-    picture = models.ImageField("Изображение")
+    picture = models.TextField("Изображение")
     rating = models.PositiveSmallIntegerField("Рейтинг", default=0)
     slug = models.SlugField(max_length=160, unique=True)
 
@@ -81,7 +66,7 @@ class Car(models.Model):
     model = models.CharField('Модель', max_length=100)
     line = models.CharField('Линейка', max_length=100, default='', blank=True)
     price = models.CharField('Цена', max_length=100)
-    poster = models.ImageField('Глав. изображение')
+    poster = models.TextField('Глав. изображение')
     slug = models.SlugField('slug', max_length=200, default='')
 
     tagline = models.CharField('Слоган', max_length=200, default='')
@@ -119,20 +104,20 @@ class Car(models.Model):
 
 
 class CarImages(models.Model):
-    imageSlider1 = models.ImageField('Картинка для слайдера 1', default='')
-    imageSlider2 = models.ImageField('Картинка для слайдера 2', default='')
-    imageSlider3 = models.ImageField('Картинка для слайдера 3', default='')
+    imageSlider1 = models.TextField('Картинка для слайдера 1', default='')
+    imageSlider2 = models.TextField('Картинка для слайдера 2', default='')
+    imageSlider3 = models.TextField('Картинка для слайдера 3', default='')
 
-    imageAbout1 = models.ImageField('Дизайн', default='')
-    imageAbout2 = models.ImageField('Комфорт', default='')
-    imageAbout3 = models.ImageField('Управляемость', default='')
+    imageAbout1 = models.TextField('Дизайн', default='')
+    imageAbout2 = models.TextField('Комфорт', default='')
+    imageAbout3 = models.TextField('Управляемость', default='')
 
-    imageGallery1 = models.ImageField('Картинка для галереи 1', default='')
-    imageGallery2 = models.ImageField('Картинка для галереи 2', default='')
-    imageGallery3 = models.ImageField('Картинка для галереи 3', default='')
-    imageGallery4 = models.ImageField('Картинка для галереи 4', default='')
-    imageGallery5 = models.ImageField('Картинка для галереи 5', default='')
-    imageGallery6 = models.ImageField('Картинка для галереи 6', default='')
+    imageGallery1 = models.TextField('Картинка для галереи 1', default='')
+    imageGallery2 = models.TextField('Картинка для галереи 2', default='')
+    imageGallery3 = models.TextField('Картинка для галереи 3', default='')
+    imageGallery4 = models.TextField('Картинка для галереи 4', default='')
+    imageGallery5 = models.TextField('Картинка для галереи 5', default='')
+    imageGallery6 = models.TextField('Картинка для галереи 6', default='')
 
     car = models.ForeignKey(Car, on_delete=models.CASCADE, verbose_name='Автомобиль', default=0)
 
@@ -142,3 +127,21 @@ class CarImages(models.Model):
     class Meta:
         verbose_name = "Галерея"
         verbose_name_plural = "Галереи"
+
+
+class PurchaseCar(models.Model):
+    # Запрос к дилеру
+
+    car_model = models.CharField('Модель авто', max_length=200)
+    name = models.CharField('Имя', max_length=200)
+    surname = models.CharField('Фамилия', max_length=200)
+    mail = models.EmailField('Почта')
+    phone = models.CharField('Телефон', max_length=100)
+    date = models.DateTimeField('Дата записи', default=datetime.datetime.now())
+
+    def __str__(self):
+        return f"{self.car_model} - {self.name} - {self.surname}"
+
+    class Meta:
+        verbose_name = "Запрос к дилеру"
+        verbose_name_plural = "Запросы к дилеру"

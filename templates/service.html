@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<section class="our_services">
+    <div class="container">
+        <div class="row framme">
+            <div class="col-lg-6 col-12 box">
+                <div class="row">
+                    <h2 class="gray_title">{% trans 'Наш сервис' %}</h2>
+                </div>
+                <div class="row">
+                    <h2 class="wide_title">{% trans 'Вы можете ознакомится' %}</h2>
+                </div>
+                <div class="row">
+                    <h2 class="many_auto">{% trans 'С услугами которые мы предлагаем:' %}</h2>
+                </div>
+                <div class="row">
+                    <h2 class="text">{% trans "Познакомьтесь с квалифицированной командой механиков с более чем 5-летним безупречным опытом работы в сфере ремонта автомобилей! Мы используем только высококачественные запчасти и стремимся сделать ваши поездки безопасными и комфортными! Мы всегда рады помочь вам в решении этих задач." %}
+                    </h2>
+                </div>
+                <div class="row">
+                    <!--<button class="slider_button btn" style="position: relative;">{% trans 'ЗАПИСАТЬСЯ' %}</button>-->
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <ul>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Бесплатная аренда автомобилей' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Бесплатный трансфер' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Общий Ремонт И Техническое Обслуживание Автомобилей' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Общий Ремонт И Техническое Обслуживание Автомобилей' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Рекомендуемое Производителем Обслуживание' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Ремонт и замена тормозов' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Ремонт Кондиционера Воздуха' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Ремонт и замена шин' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Ремонт Топливной Системы' %}</p></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-12">
+                <ul>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Пуско-наладочный ремонт' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Выравнивание Колес' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Резюме цапф' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Компьютерное Диагностическое Тестирование' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Профилактическое Обслуживание Транспортных Средств' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Государственная Инспекция Выбросов' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Установка Для Ремонта Выбросов' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Настройка' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Замена Масла' %}</p></li>
+                    <li><p><i class="fa fa-chevron-right" aria-hidden="true"></i>{% trans 'Тормозная Работа / Обслуживание Тормозов' %}</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="car_servise_record_title">
+    <div class="container">
+        <div class="row">
+            <h2>Запись на автосервис</h2>
+        </div>
+    </div>
+</section>
+
+<section class="car_servise_record_form">
+    <div class="container">
+        <form action="car service record.html">
+            <div class="form-row">
+                <div class="col-lg-12">
+                    <label for="inputTypeOfWork">Вид работ:</label>
+                    <select id="inputTypeOfWork" class="form-control">
+                        <option selected>Кузовные работы</option>
+                        <option>Селесарные работы</option>
+                        <option>Двигатель</option>
+                        <option>Электрика</option>
+                        <option>Шиномонтаж</option>
+                        <option>Компьютерная диагностика</option>
+                        <option>Коробка передач</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputDate">Дата:</label>
+                    <input id="inputDate" class="form-control" type="date" class="input">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputTime">Время:</label>
+                    <select id="inputTime" class="form-control">
+                        <option selected>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputName">Имя:</label>
+                    <input id="inputName" class="form-control" type="text" class="input">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputLastName">Фамилия:</label>
+                    <input id="inputName" class="form-control" type="text" class="input">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPhone">Номер телефона:</label>
+                  <input type="text" class="form-control" id="inputPhone">
+                </div>
+              </div>
+            <div class="form-row">
+                <button type="submit" class="slider_button service_record_btn">Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <div class="row framme">
+            <div class="row our_certified_label_1">
+                <h2 class="gray_title">{% trans 'Отзывы' %}</h2>
+            </div>
+            <div class="row our_certified_label_2">
+                <h2 class="wide_title">{% trans 'Что наши' %} <strong>{% trans 'клиенты говорят' %}</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonials_block">
+                        <div class="testimonials_block_content">
+                            <div class="row">
+                                <div class="col-2" style="padding: 0; font-size: 25px;">
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col" style="padding: 0;">
+                                    <p class="text">
+                                        Попал в аварию, машина в хлам. Пришел в этот прекрасный автосалон и купил себе новую AUDI Q8. Очень доволен!
+                                    </p>
+                                    <h6>Сергей Пеший</h6>
+                                    <h6 class="testimonials_date">26 {% trans 'September' %}, 2019</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonials_block">
+                        <div class="testimonials_block_content">
+                            <div class="row">
+                                <div class="col-2" style="padding: 0; font-size: 25px;">
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col" style="padding: 0;">
+                                    <p class="text">
+                                        Попал в аварию, машина в хлам. Пришел в этот прекрасный автосалон и купил себе новую AUDI Q7. Очень доволен!
+                                    </p>
+                                    <h6>Дмитрий Маслов</h6>
+                                    <h6 class="testimonials_date">21 {% trans 'October' %}, 2020</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonials_block">
+                        <div class="testimonials_block_content">
+                            <div class="row">
+                                <div class="col-2" style="padding: 0; font-size: 25px;">
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col" style="padding: 0;">
+                                    <p class="text">
+                                        Попал в аварию, машина в хлам. Пришел в этот прекрасный автосалон и купил себе новую AUDI S. Очень доволен!
+                                    </p>
+                                    <h6>Кирилл Сухой</h6>
+                                    <h6 class="testimonials_date">03 {% trans 'September' %}, 2020</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acda90f0e685f4720ae77812bf21de398f0480379cad8f4ba343dd039618b42b4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+
+{% endblock content %}

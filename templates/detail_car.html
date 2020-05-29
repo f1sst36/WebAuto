@@ -47,13 +47,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ img.imageSlider1.url }}" class="d-block w-100" alt="...">
+                <img src="{{ img.imageSlider1 }}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{ img.imageSlider2.url }}" class="d-block w-100" alt="...">
+                <img src="{{ img.imageSlider2 }}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{ img.imageSlider3.url }}" class="d-block w-100" alt="...">
+                <img src="{{ img.imageSlider3 }}" class="d-block w-100" alt="...">
             </div>
             <!--<div class="carousel-item">
                 <img src="img/a7-4.jpeg" class="d-block w-100" alt="...">
@@ -99,7 +99,7 @@
     <div class="row equipment_items">
         <div class="col-lg-4 col-md-4">
             <div class="equipment_content">
-                <img src="{{ img.imageAbout1.url }}" alt="">
+                <img src="{{ img.imageAbout1 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
                     <h3>Дизайн кузова</h3>
@@ -111,7 +111,7 @@
         </div>
         <div class="col-lg-4 col-md-4">
             <div class="equipment_content">
-                <img src="{{ img.imageAbout2.url }}" alt="">
+                <img src="{{ img.imageAbout2 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
                     <h3>Комфорт</h3>
@@ -123,7 +123,7 @@
         </div>
         <div class="col-lg-4 col-md-4">
             <div class="equipment_content">
-                <img src="{{ img.imageAbout3.url }}" alt="">
+                <img src="{{ img.imageAbout3 }}" alt="">
                 <div class="img-tile"></div>
                 <div class="car-title">
                     <h3>Динамика и управляемость</h3>
@@ -192,36 +192,36 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="mini_pic">
-                        <img src="{{ img.imageGallery1.url }}" alt="11">
+                        <img src="{{ img.imageGallery1 }}" alt="11">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="mini_pic">
-                        <img src="{{ img.imageGallery2.url }}" alt="22">
+                        <img src="{{ img.imageGallery2 }}" alt="22">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="big_pic">
-                    <img src="{{ img.imageGallery3.url }}" alt="33">
+                    <img src="{{ img.imageGallery3 }}" alt="33">
                 </div>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="row">
                 <div class="big_pic">
-                    <img src="{{ img.imageGallery4.url }}" alt="44">
+                    <img src="{{ img.imageGallery4 }}" alt="44">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="mini_pic">
-                        <img src="{{ img.imageGallery5.url }}" alt="55">
+                        <img src="{{ img.imageGallery5 }}" alt="55">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="mini_pic">
-                        <img src="{{ img.imageGallery6.url }}" alt="66">
+                        <img src="{{ img.imageGallery6 }}" alt="66">
                     </div>
                 </div>
             </div>
@@ -274,7 +274,55 @@
     </div>
 </section>
 
-<section class=car_page_buttons>
+<section class="purchase_main_title">
+    <div class="container">
+        <div class="row">
+            <div class="row purchase_main_title_1">
+                <h2 class="wide_title">Отправить запрос дилеру</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="purchase_form">
+    <div class="container">
+        <div class="purchase_content">
+            <form action="{% url 'purchase_form' %}" method="post">
+                {% csrf_token %}
+                <div class="select_model">
+                    <select name="car_model" class="form-control">
+                        <option>Выберите модель авто*</option>
+                        <option value="Модель">Модель 1</option>
+                        <option value="Модель">Модель 2</option>
+                        <option value="Модель">Модель 3</option>
+                        <option value="Модель">Модель 4</option>
+                        <option value="Модель">Модель 5</option>
+                    </select>
+                </div>
+                <div class="input_div one">
+                    <h5>Имя*</h5>
+                    <input name="name" type="text" class="input" required>
+                </div>
+                <div class="input_div two">
+                    <h5>Фамилия*</h5>
+                    <input name="surname" type="text" class="input" required>
+                </div>
+                <div class="input_div three">
+                    <h5>Email</h5>
+                    <input name="mail" type="email" class="input" required>
+                </div>
+                <div class="input_div four">
+                    <h5>Телефон*</h5>
+                    <input name="phone" type="text" class="input" required>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <button type="submit" class="slider_button purchase_btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--<section class=car_page_buttons>
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-lg-4 col-md-4">
@@ -285,7 +333,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <script src="{% static 'js/car_equipments.js' %}"></script>
 

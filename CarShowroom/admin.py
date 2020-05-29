@@ -1,11 +1,6 @@
 from django.contrib import admin
-from .models import User, Product, Reviews, TestDrive, Car, CarImages
+from .models import Product, Reviews, TestDrive, Car, CarImages, PurchaseCar
 from modeltranslation.admin import TranslationAdmin
-
-
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    pass
 
 
 @admin.register(Product)
@@ -30,6 +25,11 @@ class CarAdmin(admin.ModelAdmin):
 
 @admin.register(CarImages)
 class CarImagesAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(PurchaseCar)
+class PurchaseCarAdmin(admin.ModelAdmin):
     pass
 
 

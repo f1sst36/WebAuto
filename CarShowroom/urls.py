@@ -15,4 +15,6 @@ urlpatterns = [
     path("models", views.ModelsView.as_view(), name='models_page'),
     path("json-filter", views.JsonFilterCars.as_view(), name='json_filter_cars'),
     path("car/<slug:slug>", views.CarView.as_view(), name='car_detail_view'),
+    path("purchase", views.PurchaseCar.as_view(), name='purchase_form'),
+    path("service", views.ServiceView.as_view(), name='service_page'),
 ]

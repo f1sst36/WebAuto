@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
-from .forms import ReviewsForm, TestDriveForm
+from .forms import ReviewsForm, TestDriveForm, PurchaseCarForm
 from .models import Product, Car, CarImages
 
 
@@ -114,7 +114,7 @@ class RecordTestDrive(View):
             form.save()
             send_mail('AUDI Store запись на тест драйв', f"Здравствуйте, {form.name}."
                                                          f"\nВы были записаны на тест-драйв автомобиля {form.car_model}. "
-                                                         f"\nПросим явиться вас в наш автосалон {form.date.day} числа ({form.date.month} месяца) в {form.time}."
+                                                         f"\nПросим явиться вас в наш автосалон {form.date.day} числа в {form.time}."
                                                          f"\nТак же, в ближайщее время с вами свяжется наш сотрудник чтобы обсудить детали.",
                       'audistoreshowroom@gmail.com', [form.mail], fail_silently=False)
             return redirect('thx_record_on_test_drive')
@@ -160,3 +160,24 @@ class CarView(DetailView):
         context = super().get_context_data(*args, **kwargs)
         context['img'] = CarImages.objects.filter(car__slug=context['car'].slug).first()
         return context
+
+
+class PurchaseCar(View):
+    # Запрос к дилеру
+
+    def post(self, request):
+        form = PurchaseCarForm(request.POST)
+        print('no valid for now')
+        if form.is_valid():
+            print('valid')
+            form.save(commit=False)
+            send_mail('AUDI Store запрос дилеру', f"Был отправлен запрос дилеру, побробная инфа в БД.",
+                      'audistoreshowroom@gmail.com', ['f1sst36@gmail.com', 'edemmametov2000@gmail.com'],
+                      fail_silently=False)
+            form.save()
+        return redirect('main_page')
+
+
+class ServiceView(View):
+    def get(self, request):
+        return render(request, 'service.html', context=None)

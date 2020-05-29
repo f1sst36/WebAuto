@@ -122,6 +122,7 @@ LANGUAGES = (
     ('ru', gettext('Russia')),
     ('en', gettext('English')),
 )
+DEFAULT_LANGUAGE = "ru"
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),

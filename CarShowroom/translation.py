@@ -9,10 +9,7 @@ class ProductTranslationOptions(TranslationOptions):
 
 @register(Car)
 class CarTranslationOptions(TranslationOptions):
-    fields = ('tagline',
-              'description',
-              'about_design',
-              'about_comfort',
+    fields = ('tagline', 'description', 'about_design', 'about_comfort',
               'about_controllability',
               'feature_text1',
               'feature_text2',

@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib import admin
-from .models import Product, Reviews, TestDrive, Car, CarImages, PurchaseCar
+from .models import Product, Reviews, TestDrive, Car, CarImages, PurchaseCar, ServiceCar
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -16,12 +16,12 @@ class ReviewsAdmin(admin.ModelAdmin):
 
 @admin.register(TestDrive)
 class TestDriveAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'mail', 'car_model', 'send_data')
 
 
 @admin.register(Car)
-class CarAdmin(admin.ModelAdmin):
-    pass
+class CarAdmin(TranslationAdmin):
+    list_display = ('model', 'line', 'price', 'slug')
 
 
 @admin.register(CarImages)
@@ -31,7 +31,12 @@ class CarImagesAdmin(admin.ModelAdmin):
 
 @admin.register(PurchaseCar)
 class PurchaseCarAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'mail', 'car_model', 'date')
+
+
+@admin.register(ServiceCar)
+class ServiceCarAdmin(admin.ModelAdmin):
+    list_display = ('name', 'mail', 'work_type', 'date_send')
 
 
 admin.site.site_title = "Автосалон AUDI"

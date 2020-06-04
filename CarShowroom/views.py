@@ -8,14 +8,15 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
 from .forms import ReviewsForm, TestDriveForm, PurchaseCarForm, ServiceForm
-from .models import Product, Car, CarImages
+from .models import Product, Car, CarImages, StaticInfo
 
 
 class MainView(View):
     '''Главная страница'''
 
     def get(self, request):
-        return render(request, "index.html", context=None)
+        data = StaticInfo.objects.all()
+        return render(request, "index.html", {'data': data.first()})
 
 
 '''class ShopView(ListView):
@@ -32,9 +33,12 @@ class ShopView(ListView):
 
     model = Product
     queryset = Product.objects.order_by("-rating")
+
     template_name = "shop.html"
 
     paginate_by = 3
+
+    # return render(request, "index.html", {'product_list': queryset}
 
 
 class SearchProductView(ListView):
@@ -189,7 +193,8 @@ class ServiceCar(View):
         form = ServiceForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            send_mail('AUDI Store запись на сервис', f"Здравствуйте, {form.name} {form.surname}.\nВы были записаны на сервис на {form.date.day} число.",
+            send_mail('AUDI Store запись на сервис',
+                      f"Здравствуйте, {form.name} {form.surname}.\nВы были записаны на сервис на {form.date.day} число.",
                       'audistoreshowroom@gmail.com', [form.mail],
                       fail_silently=False)
             form.save()

@@ -13,7 +13,7 @@ let html = `
 {{#cars}}
     <div class="car-card">
         <div class="car-img-outer">
-            <img class="car-img" src="{{ poster }}" alt="">
+            <img class="car-img" src="/media/{{ poster }}" alt="">
             <div class="img-tile"></div>
         </div>
         <div class="car-title">

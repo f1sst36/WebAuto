@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Product, Car
+from .models import Product, Car, Transmission, Drive, Engine, Modeltype, StaticInfo
 
 
 @register(Product)
@@ -15,9 +15,38 @@ class CarTranslationOptions(TranslationOptions):
               'feature_text2',
               'feature_text3',
               'power',
-              'model_type',
-              'drive',
-              'transmission',
               'acceleration',
               'max_speed',
+              )
+
+
+@register(Engine)
+class EngineTranslationOptions(TranslationOptions):
+    fields = ('title', )
+
+
+@register(Drive)
+class DriveTranslationOptions(TranslationOptions):
+    fields = ('title', )
+
+
+@register(Transmission)
+class TransmissionTranslationOptions(TranslationOptions):
+    fields = ('title', )
+
+
+@register(Modeltype)
+class ModeltypeTranslationOptions(TranslationOptions):
+    fields = ('title', )
+
+
+@register(StaticInfo)
+class StaticInfoTranslationOptions(TranslationOptions):
+    fields = ('electroCarInfo',
+              'discountSection',
+              'development',
+              'trust',
+              'guarantees',
+              'address',
+              'workTime',
               )

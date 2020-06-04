@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-29 23:00+0300\n"
+"POT-Creation-Date: 2020-06-03 15:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\WebAuto\settings.py:122
+#: .\WebAuto\settings.py:130
 msgid "Russia"
 msgstr ""
 
-#: .\WebAuto\settings.py:123
+#: .\WebAuto\settings.py:131
 msgid "English"
 msgstr ""
 
@@ -60,19 +60,19 @@ msgstr ""
 "offer is combined with any existing promotions for new ones Audi cars. You "
 "can find out more about the program terms and conditions from a consultant."
 
-#: .\templates\cars.html:96
+#: .\templates\cars.html:38
 msgid "Фильтровать"
 msgstr "Filter"
 
-#: .\templates\cars.html:112 .\templates\detail_car.html:64
+#: .\templates\cars.html:54 .\templates\detail_car.html:64
 msgid "от"
 msgstr "from"
 
-#: .\templates\cars.html:112 .\templates\detail_car.html:64
+#: .\templates\cars.html:54 .\templates\detail_car.html:64
 msgid "руб. вкл. НДС"
 msgstr "RUB incl. VAT"
 
-#: .\templates\cars.html:115
+#: .\templates\cars.html:57
 msgid "Обзор"
 msgstr "Review"
 

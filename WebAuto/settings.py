@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['blooming-oasis-51072.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'modeltranslation',
+    'ckeditor',
+    'ckeditor_uploader',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'ckeditor',
-    'ckeditor_uploader',
     'CarShowroom',
 ]
 
@@ -81,10 +81,18 @@ WSGI_APPLICATION = 'WebAuto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'CarShowroomDB',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -141,6 +149,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'audistoreshowroom@gmail.com'
@@ -162,5 +172,12 @@ DATABASES['default'].update(db_from_env)
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # строку выше можно убрать если что
 
+CKEDITOR_CONFIGS = {
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
+    'default': {
+
+     'toolbar': 'None'
+
+    },
+
+}

@@ -5,6 +5,38 @@ from pyexpat import model
 
 from django.urls import reverse
 
+from ckeditor_uploader.fields import RichTextUploadingField
+
+
+class StaticInfo(models.Model):
+    # Главная страница
+    name = models.CharField(max_length=200, default='')
+    sliderInfo = RichTextUploadingField()
+
+    expYears = models.PositiveSmallIntegerField('Лет опыта')
+    workers = models.PositiveSmallIntegerField('Кол-во работников')
+    dovrelnyClients = models.PositiveIntegerField('Кол-во клиентов')
+
+    electroCarPicture = models.ImageField('Картинка электромобиля')
+    electroCarInfo = RichTextUploadingField()
+
+    discountSection = RichTextUploadingField()
+
+    development = models.TextField()
+    trust = models.TextField()
+    guarantees = models.TextField()
+
+    address = models.CharField(max_length=250)
+    phone = models.CharField(max_length=50)
+    workTime = models.CharField(max_length=250)
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        verbose_name = "Глав. страница"
+        verbose_name_plural = "Глав. страницы"
+
 
 class Product(models.Model):
     # Деталь для авто
@@ -62,11 +94,55 @@ class TestDrive(models.Model):
         verbose_name_plural = "Записи на тест драйв"
 
 
+class Engine(models.Model):
+    title = models.CharField('Название', max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Двигатель"
+        verbose_name_plural = "Двигатели"
+
+
+class Drive(models.Model):
+    title = models.CharField('Название', max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Привод"
+        verbose_name_plural = "Приводы"
+
+
+class Transmission(models.Model):
+    title = models.CharField('Название', max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Коробка передач"
+        verbose_name_plural = "Коробки передач"
+
+
+class Modeltype(models.Model):
+    title = models.CharField('Название', max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Тип модели"
+        verbose_name_plural = "Типы моделей"
+
+
 class Car(models.Model):
     model = models.CharField('Модель', max_length=100)
     line = models.CharField('Линейка', max_length=100, default='', blank=True)
     price = models.CharField('Цена', max_length=100)
-    poster = models.TextField('Глав. изображение')
+    poster = models.ImageField('Глав. изображение')
     slug = models.SlugField('slug', max_length=200, default='')
 
     tagline = models.CharField('Слоган', max_length=200, default='')
@@ -84,11 +160,13 @@ class Car(models.Model):
     feature_text3 = models.CharField('Текст третей особенности', max_length=150, default='')
 
     power = models.CharField('Мощность', max_length=100, default='')
-    model_type = models.CharField('Тип модели', max_length=100, default='')
     number_of_packages = models.CharField('Количество мест', max_length=100, default='')
-    engine = models.CharField('Двигатель', max_length=100, default='')
-    drive = models.CharField('Привод', max_length=100, default='')
-    transmission = models.CharField('Коробка передач', max_length=100, default='')
+
+    model_type = models.ForeignKey(Modeltype, on_delete=models.CASCADE, verbose_name='Тип модели', default='')
+    engine = models.ForeignKey(Engine, on_delete=models.CASCADE, verbose_name='Двигатель', default='')
+    drive = models.ForeignKey(Drive, on_delete=models.CASCADE, verbose_name='Привод', default='')
+    transmission = models.ForeignKey(Transmission, on_delete=models.CASCADE, verbose_name='Коробка передач', default='')
+
     acceleration = models.CharField('Разгон', max_length=100, default='')
     max_speed = models.CharField('Максимальная скорость', max_length=100, default='')
 
@@ -104,20 +182,20 @@ class Car(models.Model):
 
 
 class CarImages(models.Model):
-    imageSlider1 = models.TextField('Картинка для слайдера 1', default='')
-    imageSlider2 = models.TextField('Картинка для слайдера 2', default='')
-    imageSlider3 = models.TextField('Картинка для слайдера 3', default='')
+    imageSlider1 = models.ImageField('Картинка для слайдера 1')
+    imageSlider2 = models.ImageField('Картинка для слайдера 2')
+    imageSlider3 = models.ImageField('Картинка для слайдера 3')
 
-    imageAbout1 = models.TextField('Дизайн', default='')
-    imageAbout2 = models.TextField('Комфорт', default='')
-    imageAbout3 = models.TextField('Управляемость', default='')
+    imageAbout1 = models.ImageField('Дизайн')
+    imageAbout2 = models.ImageField('Комфорт')
+    imageAbout3 = models.ImageField('Управляемость')
 
-    imageGallery1 = models.TextField('Картинка для галереи 1', default='')
-    imageGallery2 = models.TextField('Картинка для галереи 2', default='')
-    imageGallery3 = models.TextField('Картинка для галереи 3', default='')
-    imageGallery4 = models.TextField('Картинка для галереи 4', default='')
-    imageGallery5 = models.TextField('Картинка для галереи 5', default='')
-    imageGallery6 = models.TextField('Картинка для галереи 6', default='')
+    imageGallery1 = models.ImageField('Картинка для галереи 1')
+    imageGallery2 = models.ImageField('Картинка для галереи 2')
+    imageGallery3 = models.ImageField('Картинка для галереи 3')
+    imageGallery4 = models.ImageField('Картинка для галереи 4')
+    imageGallery5 = models.ImageField('Картинка для галереи 5')
+    imageGallery6 = models.ImageField('Картинка для галереи 6')
 
     car = models.ForeignKey(Car, on_delete=models.CASCADE, verbose_name='Автомобиль', default=0)
 

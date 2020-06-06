@@ -15,8 +15,9 @@ class MainView(View):
     '''Главная страница'''
 
     def get(self, request):
-        data = StaticInfo.objects.all()
-        return render(request, "index.html", {'data': data.first()})
+        #data = StaticInfo.objects.all()
+        #{'data': data.first()}
+        return render(request, "index.html", context=None)
 
 
 '''class ShopView(ListView):
@@ -33,12 +34,8 @@ class ShopView(ListView):
 
     model = Product
     queryset = Product.objects.order_by("-rating")
-
     template_name = "shop.html"
-
     paginate_by = 3
-
-    # return render(request, "index.html", {'product_list': queryset}
 
 
 class SearchProductView(ListView):

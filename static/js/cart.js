@@ -1,11 +1,11 @@
 function getCartData(){
-console.log(JSON.parse(localStorage.getItem('cart')))
-  return JSON.parse(localStorage.getItem('cart'));
+    //console.log(JSON.parse(localStorage.getItem('cart')))
+    return JSON.parse(localStorage.getItem('cart'));
 }
 
 function setCartData(o){
-  localStorage.setItem('cart', JSON.stringify(o));
-  return false;
+    localStorage.setItem('cart', JSON.stringify(o));
+    return false;
 }
 
 function OpenCart(){
